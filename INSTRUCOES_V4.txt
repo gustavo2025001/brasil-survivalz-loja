@@ -1,0 +1,19 @@
+BRASIL SURVIVALZ V4 NEON
+
+Atualização baseada no visual aprovado:
+- visual neon mais vivo no topo;
+- atalhos para VIP, Itens, Carros e MMG;
+- Discord clicável;
+- seção de redes sociais clicável;
+- loja/carrinho da V3 mantidos;
+- imagens continuam na raiz, sem pasta assets.
+
+PARA ATUALIZAR NO GITHUB:
+1. Extraia este ZIP.
+2. Entre em brasil-survivalz-loja.
+3. Add file > Upload files.
+4. Selecione TODOS os arquivos desta pasta.
+5. Envie.
+6. Clique em Commit changes.
+7. Aguarde o GitHub Pages.
+8. Abra a loja e pressione Ctrl+F5.

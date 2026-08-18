@@ -1,0 +1,16 @@
+ATUALIZAÇÃO DAS REDES SOCIAIS
+
+Esta versão mantém a V3 e corrige os links sociais:
+- Instagram: @BRASIL SURVIVALOFICIAL
+- Discord: convite cgMUyM8RZ
+- YouTube: @BRASILSURVIVALZOFICIAL
+
+Os três abrem em nova aba.
+
+COMO ATUALIZAR NO GITHUB:
+1. Extraia o ZIP.
+2. No repositório, Add file > Upload files.
+3. Selecione TODOS os arquivos da pasta extraída.
+4. Envie e clique em Commit changes.
+5. Aguarde o GitHub Pages atualizar.
+6. Abra a loja e pressione Ctrl+F5.
