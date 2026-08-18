@@ -1,0 +1,51 @@
+BRASIL SURVIVALZ — V6 BS COINS
+
+CONFIGURAÇÃO APLICADA
+- Servidor Vanilla / Chernarus.
+- Sem helicópteros na loja.
+- 30 zumbis = 10 BS Coins.
+- 15 jogadores = 10 BS Coins.
+
+KITS:
+KIT BASE = 1200 BS Coins
+3 caixas de prego
+2 martelos
+2 serrotes
+2 machados pequenos
+6 esmeris
+50 tábuas
+50 madeiras (trocos)
+1 corda
+
+KIT MÉDIO = 650 BS Coins
+5 caixas de prego
+3 martelos
+3 serrotes
+3 machados pequenos
+10 esmeris
+100 tábuas
+100 madeiras (trocos)
+2 cordas
+
+KIT AVANÇADO = 3500 BS Coins
+8 caixas de prego
+5 martelos
+4 serrotes
+4 machados pequenos
+15 esmeris
+200 tábuas
+200 madeiras (trocos)
+4 cordas
+
+Também inclui abas de itens Vanilla, veículos Vanilla e MMG com preços em Coins mais altos para preservar a progressão.
+
+IMPORTANTE:
+O saldo de 125 BS mostrado na V6 é DEMONSTRAÇÃO VISUAL local.
+O site ainda não está conectado ao servidor/mod/backend.
+Não existe crédito real nem desconto real de BS Coins até fazermos a integração segura por SteamID64.
+
+TESTE:
+Abra index.html.
+
+GITHUB:
+Depois de aprovar, envie todos os arquivos para o mesmo repositório e faça Commit changes.
