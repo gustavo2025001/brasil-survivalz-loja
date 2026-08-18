@@ -1,45 +1,81 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>BRASIL SURVIVALZ | Loja Oficial</title><link rel="stylesheet" href="style.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script></head>
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BRASIL SURVIVALZ | Loja Oficial V5</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
 <body>
-<section class="v4-hero">
-  <img src="v4_visual.jpg" alt="BRASIL SURVIVALZ">
-  <div class="v4-actions">
-    <a href="#vip">VER VIP</a>
-    <a href="#build">VER ITENS</a>
-    <a href="#cars">VER CARROS</a>
-    <a href="#mmg">VER MMG</a>
-    <a class="discord" href="https://discord.gg/cgMUyM8RZ" target="_blank" rel="noopener noreferrer">ENTRAR NO DISCORD</a>
+<header class="topbar">
+  <a class="logo" href="#inicio">BRASIL <span>SURVIVAL</span><i>Z</i></a>
+  <nav>
+    <a href="#inicio">⌂ INÍCIO</a><a href="#vip">♕ VIP</a><a href="#construcao">▣ ITENS</a>
+    <a href="#codelock">▣ CODELOCK</a><a href="#veiculos">▱ CARROS</a><a href="#mmg">▤ MMG</a>
+    <a href="#regras">☷ REGRAS</a><a href="#contato">⌕ CONTATO</a>
+  </nav>
+  <a class="cart-top" href="#checkout">🛒 CARRINHO <b id="cartCount">0</b></a>
+</header>
+
+<section class="hero5" id="inicio">
+  <div class="hero-shade"></div>
+  <div class="hero-content">
+    <div class="eyebrow">DAYZ • CHERNARUS • PVP • LOOT+</div>
+    <h1>BRASIL<br><span>SURVIVAL</span><i>Z</i></h1>
+    <h2>SOBREVIVA. CONSTRUA. <b>DOMINE CHERNARUS.</b></h2>
+    <div class="feature-row"><span>⚔ PVP <small>COMBATE REAL</small></span><span>▣ LOOT+ <small>MAIS LOOT</small></span><span>🎁 EVENTOS <small>RECOMPENSAS</small></span><span>◉ ECONOMIA <small>MOEDAS & LOJA</small></span></div>
   </div>
+  <aside class="server-box">
+    <h3>INFORMAÇÕES DO SERVIDOR</h3>
+    <p><span>MAPA</span><b>CHERNARUS</b></p><p><span>MODO</span><b>PVP</b></p>
+    <p><span>SLOTS</span><b>60</b></p><p><span>LOOT</span><b>BOOSTED</b></p>
+    <p><span>IP DO SERVIDOR</span><b>EM BREVE</b></p>
+    <a href="https://discord.gg/cgMUyM8RZ" target="_blank" rel="noopener">◉ ENTRAR NO DISCORD</a>
+  </aside>
 </section>
 
-<header class="hero"><nav><div class="brand">BRASIL <span>SURVIVALZ</span></div><div class="nav"><a href="#vip">VIP</a><a href="#construcao">CONSTRUÇÃO</a><a href="#veiculos">VEÍCULOS</a><a href="#mmg">MMG</a><a href="#checkout">CARRINHO</a></div></nav>
-<div class="hero-inner"><div class="tag">DAYZ • CHERNARUS • VANILLA SURVIVAL</div><h1>BRASIL<br><span>SURVIVALZ</span></h1><p>SOBREVIVA. CONSTRUA. DOMINE.</p><a href="#vip" class="cta">ABRIR LOJA</a></div></header>
 <main>
-<section class="strip"><div><b>VANILLA</b><small>Ritmo de sobrevivência</small></div><div><b>PIX DINÂMICO</b><small>Valor exato do carrinho</small></div><div><b>STEAMID64</b><small>Validação antes do pedido</small></div><div><b>SUPORTE</b><small>Entrega manual via Discord</small></div></section>
+<section class="section-title"><small>LOJA OFICIAL</small><h2>ESCOLHA A CATEGORIA</h2></section>
+<section class="categories">
+  <a class="cat vipc" href="#vip"><img src="vip.jpg"><b>PLANOS VIP</b><span>VER VIP →</span></a>
+  <a class="cat itemc" href="#construcao"><img src="toolbox.jpg"><b>ITENS</b><span>VER ITENS →</span></a>
+  <a class="cat codec" href="#codelock"><img src="codlock.jpg"><b>CODELOCK</b><span>VER CODELOCK →</span></a>
+  <a class="cat carc" href="#veiculos"><img src="gunter.jpg"><b>CARROS</b><span>VER CARROS →</span></a>
+  <a class="cat mmgc" href="#mmg"><img src="weapon_crate.jpg"><b>MMG</b><span>VER MMG →</span></a>
+  <a class="cat coinc" href="#coins"><div class="coin-art">Z</div><b>BS COINS</b><span>VER MOEDAS →</span></a>
+</section>
+
+<section class="coins-panel" id="coins">
+  <div><small>ECONOMIA DO SERVIDOR</small><h2>BS COINS</h2><p>A moeda própria do BRASIL SURVIVALZ será usada como segunda opção de compra na loja.</p><div class="coin-note">Integração com saldo real do DayZ: <b>EM DESENVOLVIMENTO</b></div></div>
+  <div class="daily"><span>RECOMPENSA DIÁRIA</span><div class="coin-big">Z</div><strong>+100 BS COINS</strong><p>O resgate diário será liberado quando conectarmos a V5 ao mod do servidor.</p><button disabled>EM BREVE</button></div>
+</section>
+
 <div id="catalog"></div>
+
 <section class="storage-info">
-<div class="storage-copy"><small>MMG BASE STORAGE</small><h2>SLOTS DOS BAÚS</h2><p>Os storages MMG oferecem diferentes capacidades para organizar o loot da sua base. Todos são entregues vazios.</p></div>
-<div class="slot-grid">
-<div><b>Metal Crate</b><strong>120 SLOTS</strong></div>
-<div><b>Weapon Crate</b><strong>150 SLOTS</strong></div>
-<div><b>Grenade Case</b><strong>60 SLOTS</strong></div>
-<div><b>Equipment Locker</b><strong>200 SLOTS</strong></div>
-<div><b>TA50-Locker</b><strong>300 SLOTS</strong></div>
-<div><b>Lockable Gun Rack</b><strong>100 SLOTS</strong></div>
-</div></section><section class="cart" id="checkout"><div class="head"><small>SEU PEDIDO</small><h2>CARRINHO</h2></div><div id="empty">Seu carrinho está vazio.</div><div id="cartItems"></div><div class="total">TOTAL <strong id="total">R$ 0,00</strong></div></section>
+<div class="storage-copy"><small>MMG BASE STORAGE</small><h2>SLOTS DOS BAÚS</h2><p>Storages MMG entregues vazios. Capacidade indicada abaixo.</p></div>
+<div class="slot-grid"><div><b>Metal Crate</b><strong>120 SLOTS</strong></div><div><b>Weapon Crate</b><strong>150 SLOTS</strong></div><div><b>Grenade Case</b><strong>60 SLOTS</strong></div><div><b>Equipment Locker</b><strong>200 SLOTS</strong></div><div><b>TA50-Locker</b><strong>300 SLOTS</strong></div><div><b>Lockable Gun Rack</b><strong>100 SLOTS</strong></div></div>
+</section>
+
+<section class="cart" id="checkout"><div class="head"><small>SEU PEDIDO</small><h2>CARRINHO</h2></div><div id="empty">Seu carrinho está vazio.</div><div id="cartItems"></div><div class="total">TOTAL <strong id="total">R$ 0,00</strong></div></section>
 <section class="checkout"><div class="head"><small>FINALIZAÇÃO</small><h2>GERAR PIX</h2></div><div class="checkout-grid"><div class="form">
 <label>NOME DO JOGADOR</label><input id="player" placeholder="Nome usado no DayZ">
 <label>STEAM ID64</label><input id="steam" inputmode="numeric" maxlength="17" placeholder="17 números — 7656119..."><div id="steamStatus" class="status">Informe o SteamID64.</div>
-<button id="finish">GERAR QR CODE PIX</button><p class="note">A validação local confere o formato do SteamID64. A entrega ocorre somente após conferência manual do pagamento.</p></div>
+<button id="finish">GERAR QR CODE PIX</button><p class="note">O site confere o formato do SteamID64. Pagamento e entrega são conferidos antes da liberação.</p></div>
 <div class="pixbox"><h3>PIX DO PEDIDO</h3><div id="qrcode"></div><div id="pixAmount"></div><textarea id="pixCode" readonly placeholder="PIX Copia e Cola aparecerá aqui..."></textarea><button id="copyPix">COPIAR PIX</button></div></div>
 <textarea id="order" readonly placeholder="Resumo do pedido..."></textarea><div class="actions"><button id="copyOrder">COPIAR PEDIDO</button><a href="https://discord.gg/cgMUyM8RZ" target="_blank">ABRIR DISCORD</a></div></section>
-<section class="social social-official">
-<div class="social-title"><small>COMUNIDADE</small><h2>REDES OFICIAIS — BRASIL SURVIVALZ</h2></div>
-<div class="social-links">
-<a class="social-card" href="https://www.instagram.com/brasilsurvivaloficial/" target="_blank" rel="noopener noreferrer"><span>INSTAGRAM</span><b>@BRASIL SURVIVALOFICIAL</b><em>ABRIR INSTAGRAM →</em></a>
-<a class="social-card" href="https://discord.gg/cgMUyM8RZ" target="_blank" rel="noopener noreferrer"><span>DISCORD</span><b>BRASIL SURVIVALZ</b><em>ENTRAR NO DISCORD →</em></a>
-<a class="social-card" href="https://www.youtube.com/@BRASILSURVIVALZOFICIAL" target="_blank" rel="noopener noreferrer"><span>YOUTUBE</span><b>@BRASILSURVIVALZOFICIAL</b><em>ABRIR YOUTUBE →</em></a>
+
+<section class="social5" id="contato"><h2>REDES OFICIAIS — BRASIL SURVIVALZ</h2>
+<div class="social-grid">
+<div class="soc insta"><b>INSTAGRAM</b><span>@BRASIL_SURVIVALOFICIAL</span><button onclick="alert('Precisamos colocar o link exato do seu perfil do Instagram para este botão funcionar.')">CONFIGURAR INSTAGRAM</button></div>
+<a class="soc disc" href="https://discord.gg/cgMUyM8RZ" target="_blank" rel="noopener"><b>DISCORD</b><span>COMUNIDADE OFICIAL</span><em>ENTRAR NO DISCORD →</em></a>
+<a class="soc yt" href="https://www.youtube.com/@BRASILSURVIVALZOFICIAL" target="_blank" rel="noopener"><b>YOUTUBE</b><span>BRASIL SURVIVALZ</span><em>ABRIR YOUTUBE →</em></a>
 </div></section>
-<section class="rules"><h2>REGRAS DE ENTREGA</h2><p>Itens, storages e veículos são entregues uma vez por compra. Itens perdidos, roubados ou destruídos no jogo não têm reposição gratuita. Storages MMG são entregues vazios. O pagamento é conferido manualmente antes da entrega.</p></section>
-</main><footer><b>BRASIL SURVIVALZ</b><span>DayZ • Chernarus • Vanilla Survival</span></footer><script src="script.js"></script></body></html>
+
+<section class="rules" id="regras"><h2>REGRAS DA LOJA</h2><p>Itens, storages e veículos são entregues uma vez por compra. Itens perdidos, roubados ou destruídos no jogo não têm reposição gratuita. Storages MMG são entregues vazios. Pagamentos são conferidos antes da entrega.</p></section>
+<section class="trust"><div>🛡 <b>PAGAMENTO SEGURO</b><small>PIX</small></div><div>⚡ <b>ENTREGA APÓS CONFIRMAÇÃO</b><small>Via Discord</small></div><div>🎧 <b>SUPORTE</b><small>Comunidade oficial</small></div><div>🔒 <b>SITE SEGURO</b><small>GitHub Pages</small></div></section>
+</main>
+<footer>© 2026 BRASIL SURVIVALZ • LOJA OFICIAL V5</footer>
+<script src="script.js"></script>
+</body></html>

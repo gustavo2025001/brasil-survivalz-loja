@@ -1,0 +1,32 @@
+BRASIL SURVIVALZ V5 FUNCIONAL
+
+Esta é a atualização V5 baseada no visual escolhido.
+
+FUNCIONA AGORA:
+- Menu Início, VIP, Itens, CodeLock, Carros, MMG, Regras e Contato
+- Categorias clicáveis
+- Carrinho e contador de itens
+- Validação de formato SteamID64
+- Geração de PIX e QR Code
+- Copiar PIX e copiar pedido
+- Discord clicável
+- YouTube clicável
+- Produtos, carros e storages MMG
+- Slots dos storages
+
+BS COINS / RECOMPENSA DIÁRIA:
+A área visual já existe, mas está marcada EM DESENVOLVIMENTO.
+Para saldo e resgate reais, precisamos integrar o site ao mod/servidor DayZ.
+Não foi criado saldo falso no navegador.
+
+INSTAGRAM:
+O perfil anterior retornou “perfil não disponível”.
+O botão fica como CONFIGURAR INSTAGRAM até você fornecer o link exato do perfil.
+
+ATUALIZAR NO GITHUB:
+1. Extraia o ZIP.
+2. Add file > Upload files.
+3. Selecione TODOS os arquivos da pasta extraída.
+4. Envie e clique Commit changes.
+5. Aguarde o GitHub Pages.
+6. Abra a loja e pressione Ctrl+F5.
