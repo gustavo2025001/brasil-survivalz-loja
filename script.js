@@ -96,7 +96,7 @@ document.getElementById("openCart").onclick=openCart;document.getElementById("cl
 document.getElementById("clearCart").onclick=()=>{cart=[];saveCart()};
 document.getElementById("goCheckout").onclick=()=>{closeCart();location.hash="#checkout"};
 
-function validSteam(v){return /^\d{17}$/.test(String(v).trim())}
+function validSteam(v){ return /^\d{17}$/.test(String(v).trim()); }$/.test(String(v).trim())}
 function bindSteam(inputId,statusId){
  const inp=document.getElementById(inputId),st=document.getElementById(statusId);
  inp.addEventListener("input",()=>{inp.value=inp.value.replace(/\D/g,"").slice(0,17);if(!inp.value){st.className="status";st.textContent="Informe seu SteamID64."}else if(validSteam(inp.value)){st.className="status ok";st.textContent="✓ Formato SteamID64 válido."}else{st.className="status bad";st.textContent="✕ SteamID64 inválido."}});
