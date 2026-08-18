@@ -1,0 +1,61 @@
+BRASIL SURVIVALZ — FINAL MASTER
+
+OBJETIVO
+Visual da V5 + funções corrigidas da V6.
+
+CORREÇÕES / MELHORIAS
+- Navegação do topo funcional.
+- Carrinho lateral funcional com localStorage.
+- Quantidade + / -.
+- Limpar carrinho.
+- Total em R$ e BS Coins.
+- PIX dinâmico com Copia e Cola.
+- Fallback caso a biblioteca de QR não carregue.
+- Validação local de SteamID64.
+- Botão de ajuda do SteamID64.
+- Discord e YouTube clicáveis.
+- Instagram não aponta para link quebrado; copia o @.
+- Nome do servidor pode ser copiado.
+- Layout responsivo para celular.
+- Imagens locais; sem pasta assets.
+- Kits Base, Médio e Avançado.
+- Itens Vanilla, CodeLock, veículos e MMG.
+- Pedra de Amolar incluída.
+- Sem foice.
+- Sem helicópteros.
+- Regras explícitas.
+- BS Coins: 30 zumbis = +10; 15 jogadores = +10.
+- Integração real de BS Coins claramente marcada como “em desenvolvimento”.
+
+PREÇOS DOS KITS EM BS COINS
+Kit Base: 1200 BS
+Kit Médio: 650 BS
+Kit Avançado: 3500 BS
+
+IMPORTANTE
+A parte de BS Coins ainda é front-end/preparação visual.
+Para saldo real por conta/SteamID64 e desconto real na compra precisamos de backend/API ligado ao servidor.
+Não deixe saldo real somente em JavaScript do GitHub Pages.
+
+COMO TESTAR
+1. Abra index.html.
+2. Adicione itens.
+3. Abra o carrinho.
+4. Teste +, -, limpar.
+5. Teste navegação.
+6. Teste SteamID64.
+7. Teste PIX em um carrinho com itens em R$.
+
+COMO ATUALIZAR O GITHUB
+1. Extraia o ZIP.
+2. Abra o repositório brasil-survivalz-loja.
+3. Add file > Upload files.
+4. Selecione TODOS os arquivos desta pasta.
+5. Commit changes.
+6. Aguarde o GitHub Pages.
+7. Abra a loja e pressione Ctrl+F5.
+
+REDES SOCIAIS ATUALIZADAS
+Discord: discord.gg/cgMUyM8RZ
+Instagram: @brasilsurvivalz
+YouTube: @BRASILSURVIVALZOFICIAL
