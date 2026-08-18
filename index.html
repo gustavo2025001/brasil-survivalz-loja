@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BRASIL SURVIVALZ | Loja Oficial</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <nav>
+    <div class="brand"><span>BRASIL</span> SURVIVALZ</div>
+    <div class="navlinks">
+      <a href="#vip">VIP</a><a href="#construcao">Construção</a><a href="#veiculos">Veículos</a><a href="#mmg">MMG Storage</a>
+      <a class="discord" href="https://discord.gg/cgMUyM8RZ" target="_blank">DISCORD</a>
+    </div>
+  </nav>
+  <div class="hero">
+    <div class="badge">DAYZ • VANILLA SURVIVAL</div>
+    <h1>SOBREVIVA.<br><span>CONSTRUA.</span> DOMINE.</h1>
+    <p>Loja oficial de apoio ao servidor BRASIL SURVIVALZ.</p>
+    <a href="#vip" class="cta">VER LOJA</a>
+  </div>
+</header>
+
+<main>
+<section class="info">
+  <div><b>⚡ ENTREGA MANUAL</b><small>Após confirmação do pagamento</small></div>
+  <div><b>🛡️ SERVIDOR VANILLA</b><small>Itens selecionados para preservar a experiência</small></div>
+  <div><b>💬 SUPORTE DISCORD</b><small>Envie o pedido e comprovante</small></div>
+</section>
+
+<div id="catalog"></div>
+
+<section class="cart" id="carrinho">
+  <div class="section-head"><span>SEU PEDIDO</span><h2>🛒 CARRINHO</h2></div>
+  <div id="empty">Nenhum item adicionado.</div>
+  <div id="cartItems"></div>
+  <div class="total">TOTAL <strong id="total">R$ 0,00</strong></div>
+</section>
+
+<section class="checkout">
+ <div class="section-head"><span>ÚLTIMA ETAPA</span><h2>FINALIZAR PEDIDO</h2></div>
+ <div class="checkout-grid">
+  <div class="form">
+   <label>NOME DO JOGADOR</label><input id="name" placeholder="Nome usado no DayZ">
+   <label>STEAM ID</label><input id="steam" placeholder="Ex.: 7656119...">
+   <button id="generate">GERAR PEDIDO</button>
+  </div>
+  <div class="payment">
+   <h3>◆ PAGAMENTO VIA PIX</h3>
+   <p>Substitua este texto pela sua chave quando estiver no seu computador pessoal.</p>
+   <div class="pix">COLOQUE_SUA_CHAVE_PIX_AQUI</div>
+   <small>Após pagar, copie o pedido e envie junto com o comprovante no Discord.</small>
+  </div>
+ </div>
+ <textarea id="output" readonly placeholder="O resumo do pedido aparecerá aqui..."></textarea>
+ <div class="actions">
+  <button id="copy">COPIAR PEDIDO</button>
+  <a href="https://discord.gg/cgMUyM8RZ" target="_blank">ABRIR DISCORD</a>
+ </div>
+</section>
+
+<section class="rules">
+ <h2>REGRAS DA LOJA</h2>
+ <p>Itens, storages e veículos são entregues uma única vez por compra. Itens perdidos, roubados ou destruídos durante o jogo não possuem reposição gratuita. Storages MMG são entregues vazios. A compra não garante proteção contra outros jogadores.</p>
+</section>
+</main>
+
+<footer><b>BRASIL SURVIVALZ</b><span>Sobreviva • Construa sua base • Domine Chernarus</span></footer>
+<script src="script.js"></script>
+</body>
+</html>

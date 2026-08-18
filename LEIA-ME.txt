@@ -1,0 +1,18 @@
+BRASIL SURVIVALZ — LOJA V2
+
+1. Abra index.html para visualizar a loja.
+2. Para colocar seu PIX:
+   abra index.html em um editor de texto,
+   procure COLOQUE_SUA_CHAVE_PIX_AQUI
+   e substitua pela sua chave.
+3. O Discord já está configurado:
+   https://discord.gg/cgMUyM8RZ
+4. A loja funciona sem banco de dados.
+5. O pagamento e a entrega continuam manuais nesta versão.
+6. Para publicar gratuitamente, os arquivos podem ser enviados para uma hospedagem estática gratuita.
+
+Produtos/preços configurados conforme definido:
+- Prioridade 30 dias: R$35
+- Construção Vanilla individual
+- Veículos Vanilla individuais
+- 6 storages MMG selecionados
