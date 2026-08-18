@@ -1,0 +1,29 @@
+BRASIL SURVIVALZ V6.1 CORRIGIDA
+
+CORREÇÕES:
+- Imagens REAIS nos três kits; removidos quadrados vazios.
+- Todas as abas funcionam.
+- Botões ADICIONAR funcionam.
+- Carrinho funciona com + / -.
+- Limpar pedido funciona.
+- Conta, saldo e extrato abrem em modal.
+- Discord funciona.
+- Layout responsivo.
+- Nenhuma dependência externa.
+
+CONFIGURAÇÃO:
+30 zumbis = 10 BS Coins
+15 jogadores = 10 BS Coins
+KIT BASE = 1200 BS
+KIT MÉDIO = 650 BS
+KIT AVANÇADO = 3500 BS
+
+IMPORTANTE:
+Saldo e compra em BS Coins ainda são demonstração local.
+Para moeda real, precisamos de backend/integração com o servidor e SteamID64.
+
+TESTE:
+Abra index.html.
+Clique nas quatro abas.
+Adicione produtos ao carrinho.
+Teste + e -, limpar, extrato e conta.

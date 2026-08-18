@@ -2,31 +2,36 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>BRASIL SURVIVALZ | V6 BS Coins</title>
+<title>BRASIL SURVIVALZ | V6.1</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="hero">
+<header class="hero" id="inicio">
   <div class="brand"><b>BRASIL</b><span>SURVIVALZ</span><small>PVP | LOOT+ | CHERNARUS</small></div>
   <div class="hero-center"><h1>SOBREVIVA. CONSTRUA. DOMINE.</h1><h2>CHERNARUS TE ESPERA!</h2></div>
-  <div class="account"><small>MEU SALDO</small><strong><i>BS</i> <span id="balanceTop">125</span></strong><b>GUSTAVO</b><em>SteamID64<br>7656119XXXXXXXXXX</em></div>
+  <button class="account-card" id="accountBtn"><small>MEU SALDO</small><strong>125 <i>BS</i></strong><b>GUSTAVO</b><span>SteamID64</span></button>
 </header>
 
 <div class="app">
 <aside class="side">
- <a class="active" href="#home">⌂ INÍCIO</a><a href="#shop">🛒 LOJA</a><a href="#orders">▤ MEUS PEDIDOS</a>
- <a href="#account">♙ MINHA CONTA</a><a href="#wallet">▣ MEU SALDO</a><a href="#earn">✪ EARN COINS <span>NOVO</span></a>
- <a href="#ranking">♜ RANKING</a><a href="#support">◉ SUPORTE</a><a href="#rules">⬟ REGRAS</a>
- <div class="server"><small>STATUS DO SERVIDOR</small><b>● ONLINE</b><p>PLAYERS <strong>32/60</strong></p><p>MAPA <strong>CHERNARUS</strong></p><button>VANILLA</button></div>
- <div class="social-mini"><small>SIGA-NOS</small><div>◎ ▶ ◉</div></div>
+ <a class="active" href="#inicio">⌂ INÍCIO</a>
+ <a href="#shop">🛒 LOJA</a>
+ <a href="#pedido">▤ MEU PEDIDO <b id="sideCount">0</b></a>
+ <button id="accountSide">♙ MINHA CONTA</button>
+ <button id="walletSide">▣ MEU SALDO</button>
+ <a href="#earn">✪ EARN COINS <span>NOVO</span></a>
+ <a href="#ranking">♜ RANKING</a>
+ <a href="https://discord.gg/cgMUyM8RZ" target="_blank" rel="noopener">◉ SUPORTE</a>
+ <a href="#regras">⬟ REGRAS</a>
+ <div class="server"><small>STATUS DO SERVIDOR</small><b>● ONLINE</b><p>PLAYERS <strong>32/60</strong></p><p>MAPA <strong>CHERNARUS</strong></p><button type="button">VANILLA</button></div>
 </aside>
 
-<main id="home">
+<main>
 <section class="earn" id="earn"><h2>COMO GANHAR BS COINS</h2>
  <div class="earn-grid">
   <article><div class="skull">☠</div><div><b>MATE 30 ZUMBIS</b><strong>GANHE <span>10</span> <i>BS</i></strong></div></article>
   <article><div class="skull target">☠</div><div><b>MATE 15 JOGADORES</b><strong>GANHE <span>10</span> <i>BS</i></strong></div></article>
-  <article class="wallet"><small>SEU SALDO</small><strong><span id="balance">125</span> <i>BS</i></strong><button id="historyBtn">VER EXTRATO</button></article>
+  <article class="wallet"><small>SEU SALDO DEMO</small><strong>125 <i>BS</i></strong><button id="historyBtn">VER EXTRATO</button></article>
  </div>
 </section>
 
@@ -40,20 +45,22 @@
  <div id="products" class="products"></div>
 </section>
 
+<section class="order" id="pedido">
+ <div class="order-main"><h2>MEU PEDIDO</h2><div id="cartEmpty" class="empty">Nenhum item selecionado.</div><div id="cart"></div></div>
+ <aside class="order-summary"><small>TOTAL</small><strong><span id="cartTotal">0</span> BS</strong><button id="clearBtn" class="ghost">LIMPAR</button><button id="buyBtn">FINALIZAR PEDIDO</button><p>O saldo real será ativado quando conectarmos a conta do site ao servidor.</p></aside>
+</section>
+
 <section class="bottom-grid">
- <article class="how"><h3>COMO FUNCIONA</h3><div><span>1</span><p>Mate zumbis ou jogadores no servidor</p></div><div><span>2</span><p>Ganhe BS Coins na sua conta</p></div><div><span>3</span><p>Acesse a loja e escolha o que deseja comprar</p></div><div><span>4</span><p>Compre com BS Coins</p></div><small>ATENÇÃO: integração real do saldo será conectada ao sistema do servidor.</small></article>
- <article class="payment"><h3>FORMAS DE PAGAMENTO</h3><div>◇ PIX<br><small>Para compras em dinheiro</small></div><div>▣ BS COINS<br><small>Saldo da conta da loja</small></div><p>Pagamento e entrega conferidos antes da liberação.</p></article>
- <article class="ranking" id="ranking"><h3>RANKING DE COINS</h3><p>🥇 FUZILEIRO <b>2.450 BS</b></p><p>🥈 NINJAZ <b>1.890 BS</b></p><p>🥉 BRABO <b>1.650 BS</b></p><button>VER RANKING COMPLETO</button></article>
+ <article class="how"><h3>COMO FUNCIONA</h3><div><span>1</span><p>Complete desafios no servidor</p></div><div><span>2</span><p>Ganhe BS Coins</p></div><div><span>3</span><p>Escolha itens na loja</p></div><div><span>4</span><p>Finalize seu pedido</p></div></article>
+ <article class="payment"><h3>FORMAS DE PAGAMENTO</h3><div>◇ PIX<br><small>Dinheiro</small></div><div>▣ BS COINS<br><small>Conta da loja</small></div><p>Aprovação e entrega são conferidas antes da liberação.</p></article>
+ <article class="ranking" id="ranking"><h3>RANKING DEMO</h3><p>🥇 FUZILEIRO <b>2.450 BS</b></p><p>🥈 NINJAZ <b>1.890 BS</b></p><p>🥉 BRABO <b>1.650 BS</b></p></article>
 </section>
 
-<section class="cart-panel" id="orders">
- <div><h2>MEU PEDIDO</h2><p id="cartEmpty">Nenhum item selecionado.</p><div id="cart"></div></div>
- <aside><small>TOTAL</small><strong><span id="cartTotal">0</span> BS</strong><button id="buyBtn">FINALIZAR COM BS COINS</button><p class="warning">Nesta V6, a compra em BS Coins é uma demonstração local até ligarmos o site ao backend/mod do servidor.</p></aside>
-</section>
-
-<section class="rules" id="rules"><h3>REGRAS DA LOJA</h3><p>• Servidor mantém proposta Vanilla. Não há helicópteros à venda.</p><p>• BS Coins são vinculadas à conta da loja/SteamID64.</p><p>• Kits, veículos e storages têm preços altos em Coins para preservar a progressão.</p><p>• Itens entregues somente após validação do pedido.</p></section>
+<section class="rules" id="regras"><h3>REGRAS</h3><p>• Servidor Vanilla, sem helicópteros à venda.</p><p>• Coins vinculadas à conta/SteamID64 quando a integração for ativada.</p><p>• Preços em Coins são altos para preservar a progressão.</p></section>
 </main>
 </div>
-<footer>© 2026 BRASIL SURVIVALZ • V6 BS COINS • CHERNARUS VANILLA</footer>
+
+<div class="modal" id="modal"><div class="modal-card"><button id="modalClose">×</button><h2 id="modalTitle"></h2><div id="modalBody"></div></div></div>
+<footer>© 2026 BRASIL SURVIVALZ • V6.1 CORRIGIDA</footer>
 <script src="script.js"></script>
 </body></html>
