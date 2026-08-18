@@ -1,29 +1,25 @@
-const products=[
-["vip","🎫 VIP","Prioridade na fila - 30 dias",35],
-["construcao","🔨 CONSTRUÇÃO","Caixa de pregos",2],
-["construcao","🔨 CONSTRUÇÃO","Arame x2",2],
-["construcao","🔨 CONSTRUÇÃO","Martelo",2],
-["construcao","🔨 CONSTRUÇÃO","Machado",2],
-["construcao","🔨 CONSTRUÇÃO","Serrote",2],
-["construcao","🔨 CONSTRUÇÃO","Cadeado",3],
-["construcao","🔨 CONSTRUÇÃO","Pack 10 tábuas",2],
-["veiculos","🚗 VEÍCULOS","Sarka 120",15],
-["veiculos","🚗 VEÍCULOS","Olga 24",15],
-["veiculos","🚗 VEÍCULOS","Gunter 2",18],
-["veiculos","🚙 VEÍCULOS","Ada 4x4",20],
-["veiculos","🚚 VEÍCULOS","M3S",30],
-["mmg","📦 MMG STORAGE","Metal Crate",5],
-["mmg","📦 MMG STORAGE","Weapon Crate",7],
-["mmg","📦 MMG STORAGE","Grenade Case",5],
-["mmg","📦 MMG STORAGE","Equipment Locker",10],
-["mmg","📦 MMG STORAGE","TA50-Locker",10],
-["mmg","📦 MMG STORAGE","Lockable Gun Rack",12]
-];
-const cart={};const brl=n=>n.toLocaleString("pt-BR",{style:"currency",currency:"BRL"});
-const names={vip:["APOIE O SERVIDOR","🎫 VIP & PRIORIDADE"],construcao:["MONTE SUA BASE","🔨 CONSTRUÇÃO VANILLA"],veiculos:["ESCOLHA SEU VEÍCULO","🚗 VEÍCULOS VANILLA"],mmg:["ORGANIZE SUA BASE","📦 MMG BASE STORAGE"]};
-function catalog(){let html="";Object.keys(names).forEach(cat=>{html+=`<section class="section" id="${cat}"><div class="section-head"><span>${names[cat][0]}</span><h2>${names[cat][1]}</h2></div><div class="grid">`;products.forEach((p,i)=>{if(p[0]===cat)html+=`<article class="card"><div class="tag">${p[1]}</div><h3>${p[2]}</h3><div class="price">${brl(p[3])}</div><button onclick="add(${i})">ADICIONAR AO CARRINHO</button></article>`});html+="</div></section>"});document.getElementById("catalog").innerHTML=html}
-function add(i){cart[i]=(cart[i]||0)+1;draw()}
-function qty(i,d){cart[i]=(cart[i]||0)+d;if(cart[i]<=0)delete cart[i];draw()}
-function draw(){const e=Object.entries(cart);document.getElementById("empty").style.display=e.length?"none":"block";document.getElementById("cartItems").innerHTML=e.map(([i,q])=>{const p=products[i];return `<div class="cart-row"><div><b>${p[2]}</b><br><small>${brl(p[3])} cada</small></div><div class="controls"><button onclick="qty(${i},-1)">−</button><span>${q}</span><button onclick="qty(${i},1)">+</button><b>${brl(p[3]*q)}</b></div></div>`}).join("");document.getElementById("total").textContent=brl(e.reduce((s,[i,q])=>s+products[i][3]*q,0))}
-document.getElementById("generate").onclick=()=>{const n=document.getElementById("name").value.trim(),s=document.getElementById("steam").value.trim(),e=Object.entries(cart);if(!n||!s||!e.length){alert("Preencha o Nome, Steam ID e adicione produtos.");return}let total=e.reduce((a,[i,q])=>a+products[i][3]*q,0);let t=`PEDIDO - BRASIL SURVIVALZ\n\nJogador: ${n}\nSteam ID: ${s}\n\nITENS:\n`;e.forEach(([i,q])=>t+=`• ${q}x ${products[i][2]} — ${brl(products[i][3]*q)}\n`);t+=`\nTOTAL: ${brl(total)}\n\nPagamento via PIX. Enviar comprovante no Discord.`;document.getElementById("output").value=t}
-document.getElementById("copy").onclick=async()=>{const t=document.getElementById("output").value;if(!t)return;await navigator.clipboard.writeText(t);alert("Pedido copiado!")};catalog();draw();
+const PIX_KEY="brasilsuvivalzbrasilsuvivalz@gmail.com",PIX_NAME="GUSTAVO DE PAULA BARBOSA",PIX_CITY="RIO BRANCO";
+const P=[
+["vip","VIP & PRIORIDADE","Prioridade na fila - 30 dias",35,"assets/vip.jpg"],
+["build","CONSTRUÇÃO VANILLA","Caixa de pregos",2,"assets/nails.jpg"],["build","CONSTRUÇÃO VANILLA","Arame x2",2,"assets/wire.jpg"],
+["build","CONSTRUÇÃO VANILLA","Martelo",2,"assets/hammer.jpg"],["build","CONSTRUÇÃO VANILLA","Machado / Hatchet",2,"assets/hatchet.jpg"],
+["build","CONSTRUÇÃO VANILLA","Serrote / Hacksaw",2,"assets/hacksaw.jpg"],["build","CONSTRUÇÃO VANILLA","Serrote de mão",2,"assets/handsaw.jpg"],
+["build","CONSTRUÇÃO VANILLA","Alicate / Pliers",2,"assets/pliers.jpg"],["build","CONSTRUÇÃO VANILLA","Chave de fenda",2,"assets/screwdriver.jpg"],
+["build","CONSTRUÇÃO VANILLA","Pedra de Amolar",2,"assets/sharpening_stone.jpg"],["build","CONSTRUÇÃO VANILLA","Pá / Shovel",3,"assets/shovel.jpg"],
+["build","CONSTRUÇÃO VANILLA","Marreta / Sledgehammer",3,"assets/sledgehammer.jpg"],["build","CONSTRUÇÃO VANILLA","Machado grande / Splitting Axe",3,"assets/splitting_axe.jpg"],
+["build","CONSTRUÇÃO VANILLA","CodeLock",5,"assets/codlock.jpg"],["build","CONSTRUÇÃO VANILLA","Pack 10 tábuas",2,"assets/planks.jpg"],
+["cars","VEÍCULOS VANILLA","Sarka 120",15,"assets/sarka.jpg"],["cars","VEÍCULOS VANILLA","Olga 24",15,"assets/olga.jpg"],["cars","VEÍCULOS VANILLA","Gunter 2",18,"assets/gunter.jpg"],["cars","VEÍCULOS VANILLA","Ada 4x4",20,"assets/ada.jpg"],["cars","VEÍCULOS VANILLA","M3S",30,"assets/m3s.jpg"],
+["mmg","MMG BASE STORAGE","Metal Crate",5,"assets/metal_crate.jpg"],["mmg","MMG BASE STORAGE","Weapon Crate",7,"assets/weapon_crate.jpg"],["mmg","MMG BASE STORAGE","Grenade Case",5,"assets/grenade_case.jpg"],["mmg","MMG BASE STORAGE","Equipment Locker",10,"assets/equipment_locker.jpg"],["mmg","MMG BASE STORAGE","TA50-Locker",10,"assets/ta50.jpg"],["mmg","MMG BASE STORAGE","Lockable Gun Rack",12,"assets/gun_rack.jpg"]];
+
+const MMG_SLOTS={"Metal Crate":120,"Weapon Crate":150,"Grenade Case":60,"Equipment Locker":200,"TA50-Locker":300,"Lockable Gun Rack":100};
+const L={vip:["APOIE O SERVIDOR","VIP & PRIORIDADE"],build:["ITENS INDIVIDUAIS","CONSTRUÇÃO VANILLA"],cars:["ESCOLHA SEU VEÍCULO","VEÍCULOS VANILLA"],mmg:["STORAGES VAZIOS","MMG BASE STORAGE"]},cart={};
+const brl=n=>n.toLocaleString("pt-BR",{style:"currency",currency:"BRL"});
+function render(){let h="";Object.keys(L).forEach(cat=>{h+=`<section class="shop" id="${cat==="build"?"construcao":cat==="cars"?"veiculos":cat}"><div class="head"><small>${L[cat][0]}</small><h2>${L[cat][1]}</h2></div><div class="grid">`;P.forEach((p,i)=>{if(p[0]===cat)h+=`<article class="card"><div class="photo"><img src="${p[4]}" alt="${p[2]}"></div><div class="body"><div class="kind">${p[1]}</div><h3>${p[2]}</h3>${p[0]==="mmg"?`<div class="slots">${MMG_SLOTS[p[2]]} SLOTS</div>`:""}<div class="price">${brl(p[3])}</div><button onclick="add(${i})">ADICIONAR</button></div></article>`});h+="</div></section>"});document.getElementById("catalog").innerHTML=h}
+function add(i){cart[i]=(cart[i]||0)+1;draw()}function qty(i,d){cart[i]=(cart[i]||0)+d;if(cart[i]<=0)delete cart[i];draw()}function E(){return Object.entries(cart)}function T(){return E().reduce((s,[i,q])=>s+P[i][3]*q,0)}
+function draw(){let e=E();empty.style.display=e.length?"none":"block";cartItems.innerHTML=e.map(([i,q])=>`<div class="cart-row"><div><b>${P[i][2]}</b><br><small>${brl(P[i][3])} cada</small></div><div class="controls"><button onclick="qty(${i},-1)">−</button><span>${q}</span><button onclick="qty(${i},1)">+</button><b>${brl(P[i][3]*q)}</b></div></div>`).join("");total.textContent=brl(T())}
+const steam=document.getElementById("steam"),status=document.getElementById("steamStatus");function valid(v){return /^\d{17}$/.test(v)&&BigInt(v)>=76561197960265728n}
+steam.oninput=()=>{steam.value=steam.value.replace(/\D/g,"").slice(0,17);if(!steam.value){status.className="status";status.textContent="Informe o SteamID64."}else if(valid(steam.value)){status.className="status ok";status.textContent="✓ Formato SteamID64 válido."}else{status.className="status bad";status.textContent="✕ SteamID64 inválido."}};
+function f(id,v){return id+String(v.length).padStart(2,"0")+v}function crc(s){let c=0xffff;for(let x=0;x<s.length;x++){c^=s.charCodeAt(x)<<8;for(let i=0;i<8;i++)c=(c&0x8000)?((c<<1)^0x1021):(c<<1),c&=0xffff}return c.toString(16).toUpperCase().padStart(4,"0")}function clean(s,m){return s.normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^A-Z0-9 .-]/gi,"").toUpperCase().slice(0,m)}
+function payload(a,tx){let mai=f("26",f("00","BR.GOV.BCB.PIX")+f("01",PIX_KEY)),add=f("62",f("05",tx));let p=f("00","01")+mai+f("52","0000")+f("53","986")+f("54",a.toFixed(2))+f("58","BR")+f("59",clean(PIX_NAME,25))+f("60",clean(PIX_CITY,15))+add+"6304";return p+crc(p)}
+finish.onclick=()=>{let n=player.value.trim(),sid=steam.value.trim(),e=E(),sum=T();if(!n)return alert("Informe o nome do jogador.");if(!valid(sid))return alert("SteamID64 inválido.");if(!e.length)return alert("Adicione produtos ao carrinho.");let tx=("BSZ"+Date.now().toString().slice(-12)).slice(0,25),code=payload(sum,tx);pixCode.value=code;pixAmount.textContent=`${brl(sum)} • Pedido ${tx}`;qrcode.innerHTML="";new QRCode(qrcode,{text:code,width:220,height:220,correctLevel:QRCode.CorrectLevel.M});let t=`PEDIDO - BRASIL SURVIVALZ\nPedido: ${tx}\nJogador: ${n}\nSteamID64: ${sid}\n\nITENS:\n`;e.forEach(([i,q])=>t+=`• ${q}x ${P[i][2]} — ${brl(P[i][3]*q)}\n`);order.value=t+`\nTOTAL: ${brl(sum)}\n\nPagamento via PIX. Enviar comprovante no Discord para conferência e entrega manual.`}
+copyPix.onclick=async()=>{if(pixCode.value){await navigator.clipboard.writeText(pixCode.value);alert("PIX copiado.")}};copyOrder.onclick=async()=>{if(order.value){await navigator.clipboard.writeText(order.value);alert("Pedido copiado.")}};render();draw();

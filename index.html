@@ -1,73 +1,28 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>BRASIL SURVIVALZ | Loja Oficial</title>
-<link rel="stylesheet" href="style.css">
-</head>
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BRASIL SURVIVALZ | Loja Oficial</title><link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script></head>
 <body>
-<header>
-  <nav>
-    <div class="brand"><span>BRASIL</span> SURVIVALZ</div>
-    <div class="navlinks">
-      <a href="#vip">VIP</a><a href="#construcao">Construção</a><a href="#veiculos">Veículos</a><a href="#mmg">MMG Storage</a>
-      <a class="discord" href="https://discord.gg/cgMUyM8RZ" target="_blank">DISCORD</a>
-    </div>
-  </nav>
-  <div class="hero">
-    <div class="badge">DAYZ • VANILLA SURVIVAL</div>
-    <h1>SOBREVIVA.<br><span>CONSTRUA.</span> DOMINE.</h1>
-    <p>Loja oficial de apoio ao servidor BRASIL SURVIVALZ.</p>
-    <a href="#vip" class="cta">VER LOJA</a>
-  </div>
-</header>
-
+<header class="hero"><nav><div class="brand">BRASIL <span>SURVIVALZ</span></div><div class="nav"><a href="#vip">VIP</a><a href="#construcao">CONSTRUÇÃO</a><a href="#veiculos">VEÍCULOS</a><a href="#mmg">MMG</a><a href="#checkout">CARRINHO</a></div></nav>
+<div class="hero-inner"><div class="tag">DAYZ • CHERNARUS • VANILLA SURVIVAL</div><h1>BRASIL<br><span>SURVIVALZ</span></h1><p>SOBREVIVA. CONSTRUA. DOMINE.</p><a href="#vip" class="cta">ABRIR LOJA</a></div></header>
 <main>
-<section class="info">
-  <div><b>⚡ ENTREGA MANUAL</b><small>Após confirmação do pagamento</small></div>
-  <div><b>🛡️ SERVIDOR VANILLA</b><small>Itens selecionados para preservar a experiência</small></div>
-  <div><b>💬 SUPORTE DISCORD</b><small>Envie o pedido e comprovante</small></div>
-</section>
-
+<section class="strip"><div><b>VANILLA</b><small>Ritmo de sobrevivência</small></div><div><b>PIX DINÂMICO</b><small>Valor exato do carrinho</small></div><div><b>STEAMID64</b><small>Validação antes do pedido</small></div><div><b>SUPORTE</b><small>Entrega manual via Discord</small></div></section>
 <div id="catalog"></div>
-
-<section class="cart" id="carrinho">
-  <div class="section-head"><span>SEU PEDIDO</span><h2>🛒 CARRINHO</h2></div>
-  <div id="empty">Nenhum item adicionado.</div>
-  <div id="cartItems"></div>
-  <div class="total">TOTAL <strong id="total">R$ 0,00</strong></div>
-</section>
-
-<section class="checkout">
- <div class="section-head"><span>ÚLTIMA ETAPA</span><h2>FINALIZAR PEDIDO</h2></div>
- <div class="checkout-grid">
-  <div class="form">
-   <label>NOME DO JOGADOR</label><input id="name" placeholder="Nome usado no DayZ">
-   <label>STEAM ID</label><input id="steam" placeholder="Ex.: 7656119...">
-   <button id="generate">GERAR PEDIDO</button>
-  </div>
-  <div class="payment">
-   <h3>◆ PAGAMENTO VIA PIX</h3>
-   <p>Substitua este texto pela sua chave quando estiver no seu computador pessoal.</p>
-   <div class="pix">COLOQUE_SUA_CHAVE_PIX_AQUI</div>
-   <small>Após pagar, copie o pedido e envie junto com o comprovante no Discord.</small>
-  </div>
- </div>
- <textarea id="output" readonly placeholder="O resumo do pedido aparecerá aqui..."></textarea>
- <div class="actions">
-  <button id="copy">COPIAR PEDIDO</button>
-  <a href="https://discord.gg/cgMUyM8RZ" target="_blank">ABRIR DISCORD</a>
- </div>
-</section>
-
-<section class="rules">
- <h2>REGRAS DA LOJA</h2>
- <p>Itens, storages e veículos são entregues uma única vez por compra. Itens perdidos, roubados ou destruídos durante o jogo não possuem reposição gratuita. Storages MMG são entregues vazios. A compra não garante proteção contra outros jogadores.</p>
-</section>
-</main>
-
-<footer><b>BRASIL SURVIVALZ</b><span>Sobreviva • Construa sua base • Domine Chernarus</span></footer>
-<script src="script.js"></script>
-</body>
-</html>
+<section class="storage-info">
+<div class="storage-copy"><small>MMG BASE STORAGE</small><h2>SLOTS DOS BAÚS</h2><p>Os storages MMG oferecem diferentes capacidades para organizar o loot da sua base. Todos são entregues vazios.</p></div>
+<div class="slot-grid">
+<div><b>Metal Crate</b><strong>120 SLOTS</strong></div>
+<div><b>Weapon Crate</b><strong>150 SLOTS</strong></div>
+<div><b>Grenade Case</b><strong>60 SLOTS</strong></div>
+<div><b>Equipment Locker</b><strong>200 SLOTS</strong></div>
+<div><b>TA50-Locker</b><strong>300 SLOTS</strong></div>
+<div><b>Lockable Gun Rack</b><strong>100 SLOTS</strong></div>
+</div></section><section class="cart" id="checkout"><div class="head"><small>SEU PEDIDO</small><h2>CARRINHO</h2></div><div id="empty">Seu carrinho está vazio.</div><div id="cartItems"></div><div class="total">TOTAL <strong id="total">R$ 0,00</strong></div></section>
+<section class="checkout"><div class="head"><small>FINALIZAÇÃO</small><h2>GERAR PIX</h2></div><div class="checkout-grid"><div class="form">
+<label>NOME DO JOGADOR</label><input id="player" placeholder="Nome usado no DayZ">
+<label>STEAM ID64</label><input id="steam" inputmode="numeric" maxlength="17" placeholder="17 números — 7656119..."><div id="steamStatus" class="status">Informe o SteamID64.</div>
+<button id="finish">GERAR QR CODE PIX</button><p class="note">A validação local confere o formato do SteamID64. A entrega ocorre somente após conferência manual do pagamento.</p></div>
+<div class="pixbox"><h3>PIX DO PEDIDO</h3><div id="qrcode"></div><div id="pixAmount"></div><textarea id="pixCode" readonly placeholder="PIX Copia e Cola aparecerá aqui..."></textarea><button id="copyPix">COPIAR PIX</button></div></div>
+<textarea id="order" readonly placeholder="Resumo do pedido..."></textarea><div class="actions"><button id="copyOrder">COPIAR PEDIDO</button><a href="https://discord.gg/cgMUyM8RZ" target="_blank">ABRIR DISCORD</a></div></section>
+<section class="social"><div><small>INSTAGRAM</small><b>@BRASIL SURVIVALOFICIAL</b></div><div><small>DISCORD</small><b>discord.gg/cgMUyM8RZ</b></div></section>
+<section class="rules"><h2>REGRAS DE ENTREGA</h2><p>Itens, storages e veículos são entregues uma vez por compra. Itens perdidos, roubados ou destruídos no jogo não têm reposição gratuita. Storages MMG são entregues vazios. O pagamento é conferido manualmente antes da entrega.</p></section>
+</main><footer><b>BRASIL SURVIVALZ</b><span>DayZ • Chernarus • Vanilla Survival</span></footer><script src="script.js"></script></body></html>

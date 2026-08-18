@@ -1,18 +1,50 @@
-BRASIL SURVIVALZ — LOJA V2
+BRASIL SURVIVALZ — V3 FINAL
 
-1. Abra index.html para visualizar a loja.
-2. Para colocar seu PIX:
-   abra index.html em um editor de texto,
-   procure COLOQUE_SUA_CHAVE_PIX_AQUI
-   e substitua pela sua chave.
-3. O Discord já está configurado:
-   https://discord.gg/cgMUyM8RZ
-4. A loja funciona sem banco de dados.
-5. O pagamento e a entrega continuam manuais nesta versão.
-6. Para publicar gratuitamente, os arquivos podem ser enviados para uma hospedagem estática gratuita.
+Esta é a continuação da V3, não a versão institucional.
 
-Produtos/preços configurados conforme definido:
-- Prioridade 30 dias: R$35
-- Construção Vanilla individual
-- Veículos Vanilla individuais
-- 6 storages MMG selecionados
+INCLUÍDO:
+- Carrinho
+- SteamID64
+- PIX dinâmico com QR Code e Copia e Cola
+- Número do pedido
+- Instagram e Discord
+- VIP Prioridade
+- Construção Vanilla
+- Pedra de Amolar por R$2
+- Sem foice
+- Veículos Vanilla
+- 6 MMG Base Storage
+- Imagens locais nos cards; os materiais da referência enviada foram recortados e incorporados ao site
+- Entrega manual após confirmação
+
+OBSERVAÇÃO SOBRE IMAGENS:
+Os materiais que aparecem na imagem de referência enviada pelo proprietário da loja foram usados como base visual local.
+Os cards de veículos/MMG que ainda não tinham referência fornecida usam arte local neutra, sem emojis.
+Quando você tiver screenshots próprios dos veículos e storages no DayZ/MMG, eles podem ser substituídos diretamente na pasta assets.
+
+TESTE:
+Abra index.html.
+Adicione um item, informe nome e um SteamID64 válido e clique em GERAR QR CODE PIX.
+
+GITHUB:
+Depois de testar, substitua index.html, style.css e script.js e envie também a pasta assets inteira.
+
+
+CORREÇÃO DE IMAGENS:
+- Ferramentas agora aparecem inteiras e centralizadas.
+- object-fit: contain para impedir zoom/corte.
+- Pedra de Amolar incluída.
+
+ATUALIZAÇÃO APROVADA:
+- Cadeado substituído por CodeLock.
+- VIP Prioridade ganhou arte temática de fila/prioridade.
+- Veículos Vanilla agora têm imagens individuais no padrão aprovado.
+- MMG Base Storage agora tem imagens individuais no padrão aprovado.
+- Ferramentas permanecem inteiras e centralizadas.
+
+VERSÃO PREMIUM FINAL:
+- VIP Prioridade com visual mais vivo e destacado.
+- CodeLock mantido.
+- MMG agora mostra capacidade em SLOTS em cada produto.
+- Painel completo explicando os slots dos seis storages.
+- Ferramentas, veículos e MMG mantidos na V3.
