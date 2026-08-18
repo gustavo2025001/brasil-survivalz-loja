@@ -1,15 +1,15 @@
 const PIX_KEY="brasilsuvivalzbrasilsuvivalz@gmail.com",PIX_NAME="GUSTAVO DE PAULA BARBOSA",PIX_CITY="RIO BRANCO";
 const P=[
-["vip","VIP & PRIORIDADE","Prioridade na fila - 30 dias",35,"assets/vip.jpg"],
-["build","CONSTRUÇÃO VANILLA","Caixa de pregos",2,"assets/nails.jpg"],["build","CONSTRUÇÃO VANILLA","Arame x2",2,"assets/wire.jpg"],
-["build","CONSTRUÇÃO VANILLA","Martelo",2,"assets/hammer.jpg"],["build","CONSTRUÇÃO VANILLA","Machado / Hatchet",2,"assets/hatchet.jpg"],
-["build","CONSTRUÇÃO VANILLA","Serrote / Hacksaw",2,"assets/hacksaw.jpg"],["build","CONSTRUÇÃO VANILLA","Serrote de mão",2,"assets/handsaw.jpg"],
-["build","CONSTRUÇÃO VANILLA","Alicate / Pliers",2,"assets/pliers.jpg"],["build","CONSTRUÇÃO VANILLA","Chave de fenda",2,"assets/screwdriver.jpg"],
-["build","CONSTRUÇÃO VANILLA","Pedra de Amolar",2,"assets/sharpening_stone.jpg"],["build","CONSTRUÇÃO VANILLA","Pá / Shovel",3,"assets/shovel.jpg"],
-["build","CONSTRUÇÃO VANILLA","Marreta / Sledgehammer",3,"assets/sledgehammer.jpg"],["build","CONSTRUÇÃO VANILLA","Machado grande / Splitting Axe",3,"assets/splitting_axe.jpg"],
-["build","CONSTRUÇÃO VANILLA","CodeLock",5,"assets/codlock.jpg"],["build","CONSTRUÇÃO VANILLA","Pack 10 tábuas",2,"assets/planks.jpg"],
-["cars","VEÍCULOS VANILLA","Sarka 120",15,"assets/sarka.jpg"],["cars","VEÍCULOS VANILLA","Olga 24",15,"assets/olga.jpg"],["cars","VEÍCULOS VANILLA","Gunter 2",18,"assets/gunter.jpg"],["cars","VEÍCULOS VANILLA","Ada 4x4",20,"assets/ada.jpg"],["cars","VEÍCULOS VANILLA","M3S",30,"assets/m3s.jpg"],
-["mmg","MMG BASE STORAGE","Metal Crate",5,"assets/metal_crate.jpg"],["mmg","MMG BASE STORAGE","Weapon Crate",7,"assets/weapon_crate.jpg"],["mmg","MMG BASE STORAGE","Grenade Case",5,"assets/grenade_case.jpg"],["mmg","MMG BASE STORAGE","Equipment Locker",10,"assets/equipment_locker.jpg"],["mmg","MMG BASE STORAGE","TA50-Locker",10,"assets/ta50.jpg"],["mmg","MMG BASE STORAGE","Lockable Gun Rack",12,"assets/gun_rack.jpg"]];
+["vip","VIP & PRIORIDADE","Prioridade na fila - 30 dias",35,"vip.jpg"],
+["build","CONSTRUÇÃO VANILLA","Caixa de pregos",2,"nails.jpg"],["build","CONSTRUÇÃO VANILLA","Arame x2",2,"wire.jpg"],
+["build","CONSTRUÇÃO VANILLA","Martelo",2,"hammer.jpg"],["build","CONSTRUÇÃO VANILLA","Machado / Hatchet",2,"hatchet.jpg"],
+["build","CONSTRUÇÃO VANILLA","Serrote / Hacksaw",2,"hacksaw.jpg"],["build","CONSTRUÇÃO VANILLA","Serrote de mão",2,"handsaw.jpg"],
+["build","CONSTRUÇÃO VANILLA","Alicate / Pliers",2,"pliers.jpg"],["build","CONSTRUÇÃO VANILLA","Chave de fenda",2,"screwdriver.jpg"],
+["build","CONSTRUÇÃO VANILLA","Pedra de Amolar",2,"sharpening_stone.jpg"],["build","CONSTRUÇÃO VANILLA","Pá / Shovel",3,"shovel.jpg"],
+["build","CONSTRUÇÃO VANILLA","Marreta / Sledgehammer",3,"sledgehammer.jpg"],["build","CONSTRUÇÃO VANILLA","Machado grande / Splitting Axe",3,"splitting_axe.jpg"],
+["build","CONSTRUÇÃO VANILLA","CodeLock",5,"codlock.jpg"],["build","CONSTRUÇÃO VANILLA","Pack 10 tábuas",2,"planks.jpg"],
+["cars","VEÍCULOS VANILLA","Sarka 120",15,"sarka.jpg"],["cars","VEÍCULOS VANILLA","Olga 24",15,"olga.jpg"],["cars","VEÍCULOS VANILLA","Gunter 2",18,"gunter.jpg"],["cars","VEÍCULOS VANILLA","Ada 4x4",20,"ada.jpg"],["cars","VEÍCULOS VANILLA","M3S",30,"m3s.jpg"],
+["mmg","MMG BASE STORAGE","Metal Crate",5,"metal_crate.jpg"],["mmg","MMG BASE STORAGE","Weapon Crate",7,"weapon_crate.jpg"],["mmg","MMG BASE STORAGE","Grenade Case",5,"grenade_case.jpg"],["mmg","MMG BASE STORAGE","Equipment Locker",10,"equipment_locker.jpg"],["mmg","MMG BASE STORAGE","TA50-Locker",10,"ta50.jpg"],["mmg","MMG BASE STORAGE","Lockable Gun Rack",12,"gun_rack.jpg"]];
 
 const MMG_SLOTS={"Metal Crate":120,"Weapon Crate":150,"Grenade Case":60,"Equipment Locker":200,"TA50-Locker":300,"Lockable Gun Rack":100};
 const L={vip:["APOIE O SERVIDOR","VIP & PRIORIDADE"],build:["ITENS INDIVIDUAIS","CONSTRUÇÃO VANILLA"],cars:["ESCOLHA SEU VEÍCULO","VEÍCULOS VANILLA"],mmg:["STORAGES VAZIOS","MMG BASE STORAGE"]},cart={};

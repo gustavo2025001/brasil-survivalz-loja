@@ -1,0 +1,26 @@
+BRASIL SURVIVALZ V3 — VERSÃO SEM PASTA ASSETS
+
+IMPORTANTE:
+Esta versão foi feita especificamente para o seu GitHub atual.
+Todas as imagens ficam junto com index.html, script.js e style.css.
+NÃO existe pasta assets.
+
+COMO ATUALIZAR:
+1. Extraia este ZIP.
+2. Entre no seu repositório brasil-survivalz-loja.
+3. Add file > Upload files.
+4. Abra a pasta extraída.
+5. Selecione TODOS os arquivos de dentro dela (Ctrl+A).
+6. Arraste todos para a tela Upload files do GitHub.
+7. Clique em Commit changes.
+
+O QUE FAZER COM OS ARQUIVOS QUE JÁ ESTÃO NO GITHUB:
+- NÃO precisa apagar as imagens que você já enviou.
+- Os arquivos com o mesmo nome serão substituídos/atualizados.
+- index.html, style.css e script.js também serão atualizados.
+- Se houver LEIA-ME.txt, ele também pode ser substituído.
+- Depois do commit, aguarde o GitHub Pages atualizar e abra a loja novamente.
+
+Esta versão mantém:
+VIP Prioridade, PIX, SteamID64, carrinho, ferramentas, CodeLock,
+veículos, MMG Base Storage e painel de slots.
