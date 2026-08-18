@@ -22,7 +22,7 @@
     <a href="#coins">BS COINS</a>
     <a href="#regras">REGRAS</a>
   </nav>
-  <button class="cart-button" id="openCart">🛒 <span id="cartCount">0</span></button>
+  <button class="account-top" id="openAccount">👤 ENTRAR / CADASTRAR</button><button class="cart-button" id="openCart">🛒 <span id="cartCount">0</span></button>
 </header>
 
 <section class="hero" id="inicio" style="--hero:url('v5_preview.jpg')">
@@ -141,7 +141,7 @@
   <div class="social-card">
     <b>INSTAGRAM</b>
     <span>@BRASIL SURVIVALOFICIAL</span>
-    <a href="https://www.instagram.com/brasilsurvivalz/" target="_blank" rel="noopener">ABRIR INSTAGRAM</a>
+    <a href="https://www.instagram.com/brasilsurvivalz/" target="_blank" rel="noopener noreferrer">ABRIR INSTAGRAM</a>
   </div>
   <div class="social-card">
     <b>YOUTUBE</b>
@@ -183,6 +183,35 @@
     <h2 id="modalTitle"></h2>
     <div id="modalBody"></div>
   </div>
+</div>
+
+
+<div class="auth-modal" id="authModal">
+ <div class="auth-card">
+  <button class="auth-close" id="authClose">×</button>
+  <div class="auth-logo">BRASIL <span>SURVIVALZ</span></div>
+  <div class="auth-tabs"><button class="active" data-auth="login">ENTRAR</button><button data-auth="register">CRIAR CONTA</button></div>
+  <form id="loginForm" class="auth-form active">
+   <label>E-MAIL</label><input id="loginEmail" type="email" required placeholder="seu@email.com">
+   <label>SENHA</label><input id="loginPassword" type="password" required minlength="6" placeholder="Sua senha">
+   <button type="submit">ENTRAR NA CONTA</button>
+  </form>
+  <form id="registerForm" class="auth-form">
+   <label>NOME DO JOGADOR</label><input id="regPlayer" required maxlength="30" placeholder="Nome usado no DayZ">
+   <label>STEAMID64</label><input id="regSteam" inputmode="numeric" maxlength="17" required placeholder="17 números">
+   <div id="regSteamStatus" class="status">Digite os 17 números do SteamID64.</div>
+   <label>E-MAIL</label><input id="regEmail" type="email" required placeholder="seu@email.com">
+   <label>SENHA</label><input id="regPassword" type="password" minlength="6" required placeholder="Mínimo 6 caracteres">
+   <label>CONFIRMAR SENHA</label><input id="regConfirm" type="password" minlength="6" required placeholder="Repita a senha">
+   <button type="submit">CRIAR MINHA CONTA</button>
+  </form>
+  <div id="accountPanel" class="account-panel">
+   <small>CONTA DE TESTE LOCAL</small><h3 id="accountName"></h3>
+   <p>SteamID64: <b id="accountSteam"></b></p><p>Saldo: <strong>0 BS</strong></p>
+   <p class="safe-note">O cadastro desta versão é somente demonstração neste navegador. A conta real e o saldo real precisarão do backend.</p>
+   <button id="logoutBtn">SAIR</button>
+  </div>
+ </div>
 </div>
 
 <footer>

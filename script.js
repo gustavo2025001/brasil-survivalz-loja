@@ -96,7 +96,7 @@ document.getElementById("openCart").onclick=openCart;document.getElementById("cl
 document.getElementById("clearCart").onclick=()=>{cart=[];saveCart()};
 document.getElementById("goCheckout").onclick=()=>{closeCart();location.hash="#checkout"};
 
-function validSteam(v){return /^\d{17}$/.test(v)&&BigInt(v)>=76561197960265728n}
+function validSteam(v){return /^\d{17}$/.test(String(v).trim())}
 function bindSteam(inputId,statusId){
  const inp=document.getElementById(inputId),st=document.getElementById(statusId);
  inp.addEventListener("input",()=>{inp.value=inp.value.replace(/\D/g,"").slice(0,17);if(!inp.value){st.className="status";st.textContent="Informe seu SteamID64."}else if(validSteam(inp.value)){st.className="status ok";st.textContent="✓ Formato SteamID64 válido."}else{st.className="status bad";st.textContent="✕ SteamID64 inválido."}});
@@ -129,3 +129,67 @@ function showModal(title,body){document.getElementById("modalTitle").textContent
 document.getElementById("modalClose").onclick=()=>modal.classList.remove("show");modal.onclick=e=>{if(e.target===modal)modal.classList.remove("show")};
 
 render();
+
+// V7 — cadastro/login visual local + correção SteamID64
+const authModal=document.getElementById("authModal");
+const openAccountBtn=document.getElementById("openAccount");
+const authClose=document.getElementById("authClose");
+const accountPanel=document.getElementById("accountPanel");
+const loginForm=document.getElementById("loginForm");
+const registerForm=document.getElementById("registerForm");
+
+function openAuth(){authModal.classList.add("show");refreshAccountUI()}
+function closeAuth(){authModal.classList.remove("show")}
+openAccountBtn.onclick=openAuth;authClose.onclick=closeAuth;
+authModal.onclick=e=>{if(e.target===authModal)closeAuth()};
+
+document.querySelectorAll("[data-auth]").forEach(b=>b.onclick=()=>{
+ document.querySelectorAll("[data-auth]").forEach(x=>x.classList.remove("active"));b.classList.add("active");
+ loginForm.classList.toggle("active",b.dataset.auth==="login");
+ registerForm.classList.toggle("active",b.dataset.auth==="register");
+ accountPanel.classList.remove("show");
+});
+
+const regSteam=document.getElementById("regSteam"),regSteamStatus=document.getElementById("regSteamStatus");
+regSteam.addEventListener("input",()=>{
+ regSteam.value=regSteam.value.replace(/\D/g,"").slice(0,17);
+ if(validSteam(regSteam.value)){regSteamStatus.className="status ok";regSteamStatus.textContent="✓ SteamID64 com 17 números reconhecido."}
+ else{regSteamStatus.className="status bad";regSteamStatus.textContent="Digite exatamente 17 números."}
+});
+
+function getLocalUser(){try{return JSON.parse(localStorage.getItem("bsz_demo_user")||"null")}catch(e){return null}}
+function refreshAccountUI(){
+ const u=getLocalUser();
+ if(u){
+  loginForm.classList.remove("active");registerForm.classList.remove("active");accountPanel.classList.add("show");
+  document.getElementById("accountName").textContent=u.player;
+  document.getElementById("accountSteam").textContent=u.steam;
+  openAccountBtn.textContent="👤 "+u.player.toUpperCase();
+ } else {
+  accountPanel.classList.remove("show");
+  if(!loginForm.classList.contains("active")&&!registerForm.classList.contains("active"))loginForm.classList.add("active");
+  openAccountBtn.textContent="👤 ENTRAR / CADASTRAR";
+ }
+}
+
+registerForm.addEventListener("submit",e=>{
+ e.preventDefault();
+ const player=document.getElementById("regPlayer").value.trim(),steam=regSteam.value.trim(),
+ email=document.getElementById("regEmail").value.trim().toLowerCase(),pw=document.getElementById("regPassword").value,
+ confirm=document.getElementById("regConfirm").value;
+ if(!validSteam(steam))return showModal("SteamID64 inválido","Digite exatamente 17 números.");
+ if(pw!==confirm)return showModal("Senhas diferentes","A senha e a confirmação precisam ser iguais.");
+ // Demo only: do not persist password.
+ localStorage.setItem("bsz_demo_user",JSON.stringify({player,steam,email}));
+ refreshAccountUI();showModal("Conta de demonstração criada","Cadastro visual concluído neste navegador. A senha não foi armazenada. Para contas reais, vamos conectar um backend seguro.");
+});
+
+loginForm.addEventListener("submit",e=>{
+ e.preventDefault();
+ const email=document.getElementById("loginEmail").value.trim().toLowerCase(),u=getLocalUser();
+ if(!u||u.email!==email)return showModal("Conta não encontrada","Nesta demonstração local, crie uma conta primeiro neste navegador.");
+ refreshAccountUI();
+});
+
+document.getElementById("logoutBtn").onclick=()=>{localStorage.removeItem("bsz_demo_user");refreshAccountUI();accountPanel.classList.remove("show");loginForm.classList.add("active")};
+refreshAccountUI();

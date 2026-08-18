@@ -55,7 +55,11 @@ COMO ATUALIZAR O GITHUB
 6. Aguarde o GitHub Pages.
 7. Abra a loja e pressione Ctrl+F5.
 
-REDES SOCIAIS ATUALIZADAS
-Discord: discord.gg/cgMUyM8RZ
-Instagram: @brasilsurvivalz
-YouTube: @BRASILSURVIVALZOFICIAL
+
+V7 CADASTRO/LOGIN
+- Corrigida validação do SteamID64 para aceitar exatamente 17 números.
+- Adicionada tela Entrar / Criar Conta.
+- Cadastro: jogador, SteamID64, e-mail, senha e confirmação.
+- Área de conta demonstrativa.
+- Por segurança, a senha NÃO é armazenada no navegador.
+- Cadastro real/login real/saldo real exigem backend seguro.
