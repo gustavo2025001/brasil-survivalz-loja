@@ -1,0 +1,6 @@
+BRASIL SURVIVALZ LOJA V8.5
+- Mantém as fotos existentes do pacote anterior.
+- Mantém VIP, Kits, Vanilla, veículos, MMG, BS Coins, carrinho, PIX, SteamID64 e Supabase.
+- MMG agora mostra capacidade/slots.
+- Não coloque chave secret/service_role do Supabase no GitHub.
+- Substitua os arquivos do repositório pelos deste pacote.

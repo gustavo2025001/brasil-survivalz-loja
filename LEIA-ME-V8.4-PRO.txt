@@ -1,0 +1,7 @@
+BRASIL SURVIVALZ LOJA V8.4 PRO
+- Estrutura compacta/profissional inspirada no modelo aprovado.
+- Mantém BS Coins, login/cadastro Supabase, SteamID64, PIX/QR, carrinho, kits, VIP, carros e MMG.
+- Mantém as imagens locais aprovadas da V8.3.
+- VIP agora usa vip.jpg.
+- SteamID64: valida exatamente 17 números e mostra quantos faltam.
+Substitua no GitHub: index.html, style.css, script.js e mantenha/upload todas as imagens .jpg deste pacote.

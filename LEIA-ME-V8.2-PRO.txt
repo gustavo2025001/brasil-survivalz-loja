@@ -1,0 +1,13 @@
+BRASIL SURVIVALZ — LOJA V8.2 PRO
+
+Atualização visual completa:
+- VIP com painel destacado
+- Kits com imagens de construção DayZ
+- Itens individuais com imagens
+- Veículos com imagens DayZ
+- MMG Storage com referências visuais
+- Fundo e cards redesenhados
+- Cadastro/Login Supabase preservado
+- SteamID64, BS Coins, carrinho e PIX preservados
+
+IMPORTANTE: o site usa algumas imagens externas por URL. Se uma fonte externa bloquear hotlink, o card usa v5_preview.jpg como fallback em vez de ficar quebrado.
