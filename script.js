@@ -61,3 +61,64 @@ $("checkoutPix").onclick=()=>{if(!cart.length)return message("Carrinho vazio","A
 $("makePix").onclick=()=>{const t=totals(),name=$("playerName").value.trim(),sid=$("steamId").value.trim();if(!name)return message("Nome obrigatório","Informe seu nome no DayZ.");if(!validSteam(sid))return message("SteamID64 inválido","Digite exatamente 17 números.");if(t.totalBRL<=0)return message("Somente BS Coins","Este carrinho não possui valor em PIX.");const tx=("BSZ"+Date.now().toString().slice(-12)).slice(0,25),code=pixPayload(t.totalBRL,tx);$("pixArea").classList.remove("hidden");$("pixCode").value=code;$("pixAmount").textContent=`PIX ${brl(t.totalBRL)} • ${tx}`;$("qrcode").innerHTML="";if(window.QRCode)new QRCode($("qrcode"),{text:code,width:210,height:210});};$("copyPix").onclick=()=>navigator.clipboard.writeText($("pixCode").value);
 $("checkoutBs").onclick=async()=>{if(!cart.length)return message("Carrinho vazio","Adicione produtos primeiro.");if(!sb)return message("Conta indisponível","Supabase não carregou.");const{data:{session}}=await sb.auth.getSession();if(!session)return openAuth();const items=cart.map(r=>({id:r.id,qty:r.qty}));const{data,error}=await sb.rpc("place_bs_order",{p_items:items});if(error)return message("Compra não concluída",error.message);cart=[];saveCart();closeDrawer();await refreshAccountUI();message("Compra aprovada",`Pedido #${data?.order_id||""} criado com BS Coins.`)};
 render();refreshAccountUI();
+// ===== MINHA CONTA V2 =====
+
+async function atualizarContaV2(){
+  if(!sb) return;
+
+  const {data:{session}} = await sb.auth.getSession();
+  if(!session) return;
+
+  try{
+    const p = await getProfile(session.user.id);
+
+    const nome = p?.player_name || "Jogador";
+    const steam = p?.steam_id || "Não informado";
+    const coins = p?.bs_coins || 0;
+
+    const nomeEl = document.getElementById("accountV2Name");
+    const steamEl = document.getElementById("accountV2Steam");
+    const coinsEl = document.getElementById("accountV2Coins");
+
+    if(nomeEl) nomeEl.textContent = nome;
+    if(steamEl) steamEl.textContent = steam;
+    if(coinsEl) coinsEl.textContent = bs(coins);
+
+  }catch(e){
+    console.error("Erro Conta V2:", e);
+  }
+}
+
+// COPIAR STEAMID
+const copySteamV2 = document.getElementById("copySteamV2");
+
+if(copySteamV2){
+  copySteamV2.onclick = async ()=>{
+    const steam = document.getElementById("accountV2Steam")?.textContent;
+
+    if(!steam || steam === "Não informado"){
+      return message("SteamID64","SteamID64 ainda não informado.");
+    }
+
+    await navigator.clipboard.writeText(steam);
+    message("SteamID64 copiado","O SteamID64 foi copiado.");
+  };
+}
+
+// SAIR DA CONTA
+const logoutV2 = document.getElementById("logoutV2");
+
+if(logoutV2){
+  logoutV2.onclick = async ()=>{
+    await sb.auth.signOut();
+    location.reload();
+  };
+}
+
+atualizarContaV2();
+
+if(sb){
+  sb.auth.onAuthStateChange(()=>{
+    setTimeout(atualizarContaV2,100);
+  });
+}
