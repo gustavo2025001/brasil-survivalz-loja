@@ -60,5 +60,28 @@ function f(id,v){return id+String(v.length).padStart(2,"0")+v}function crc(s){le
 $("checkoutPix").onclick=()=>{if(!cart.length)return message("Carrinho vazio","Adicione produtos primeiro.");closeDrawer();show("checkoutModal")};
 $("makePix").onclick=()=>{const t=totals(),name=$("playerName").value.trim(),sid=$("steamId").value.trim();if(!name)return message("Nome obrigatório","Informe seu nome no DayZ.");if(!validSteam(sid))return message("SteamID64 inválido","Digite exatamente 17 números.");if(t.totalBRL<=0)return message("Somente BS Coins","Este carrinho não possui valor em PIX.");const tx=("BSZ"+Date.now().toString().slice(-12)).slice(0,25),code=pixPayload(t.totalBRL,tx);$("pixArea").classList.remove("hidden");$("pixCode").value=code;$("pixAmount").textContent=`PIX ${brl(t.totalBRL)} • ${tx}`;$("qrcode").innerHTML="";if(window.QRCode)new QRCode($("qrcode"),{text:code,width:210,height:210});};$("copyPix").onclick=()=>navigator.clipboard.writeText($("pixCode").value);
 $("checkoutBs").onclick=async()=>{if(!cart.length)return message("Carrinho vazio","Adicione produtos primeiro.");if(!sb)return message("Conta indisponível","Supabase não carregou.");const{data:{session}}=await sb.auth.getSession();if(!session)return openAuth();const items=cart.map(r=>({id:r.id,qty:r.qty}));const{data,error}=await sb.rpc("place_bs_order",{p_items:items});if(error)return message("Compra não concluída",error.message);cart=[];saveCart();closeDrawer();await refreshAccountUI();message("Compra aprovada",`Pedido #${data?.order_id||""} criado com BS Coins.`)};
-render();refreshAccountUI();
+document.addEventListener("DOMContentLoaded", async () => {
+
+  // 1. CARREGAR TODOS OS PRODUTOS
+  try {
+    render();
+    console.log("BRASIL SURVIVALZ: produtos carregados com sucesso.");
+  } catch (e) {
+    console.error("ERRO AO CARREGAR PRODUTOS:", e);
+
+    alert(
+      "ERRO AO CARREGAR OS PRODUTOS:\n\n" +
+      e.message
+    );
+  }
+
+  // 2. CARREGAR CONTA DO JOGADOR
+  try {
+    await refreshAccountUI();
+    console.log("BRASIL SURVIVALZ: conta carregada.");
+  } catch (e) {
+    console.error("ERRO AO CARREGAR CONTA:", e);
+  }
+
+});
 
