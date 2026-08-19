@@ -1,7 +1,14 @@
-BRASIL SURVIVALZ LOJA V9
-1) Envie todos os arquivos deste pacote para a raiz do seu GitHub Pages.
-2) No Supabase > SQL Editor, rode uma vez o arquivo SUPABASE_SETUP.sql.
-3) Mantenha somente a chave PUBLICÁVEL no script.js. Nunca coloque service_role/secret no GitHub.
-4) O cadastro usa SteamID64 com 17 dígitos e salva o perfil automaticamente.
-5) Compras com BS Coins usam uma função segura no Supabase e descontam o saldo pelo preço definido no banco.
-6) PIX gera QR Code no navegador; a confirmação do pagamento continua manual.
+BRASIL SURVIVALZ — LOJA V10.1
+
+1) Envie index.html, style.css e script.js para a raiz do GitHub Pages.
+2) NÃO apague suas fotos atuais. O script usa estes nomes:
+nails.jpg, wire.jpg, hammer.jpg, hatchet.jpg, handsaw.jpg, sharpening_stone.jpg, planks.jpg, codlock.jpg,
+sarka.jpg, olga.jpg, gunter.jpg, ada.jpg, m3s.jpg, kit_base.jpg, kit_medio.jpg, kit_avancado.jpg, vip.jpg,
+metal_crate.jpg, weapon_crate.jpg, grenade_case.jpg, equipment_locker.jpg, ta50.jpg, gun_rack.jpg.
+3) No Supabase > SQL Editor, execute supabase.sql UMA VEZ.
+4) Cadastro: nome DayZ + SteamID64 + e-mail + senha. O perfil é criado automaticamente.
+5) BS Coins: saldo vem da tabela profiles e compra usa a função place_bs_order.
+6) PIX: QR Code e Copia e Cola são gerados no checkout.
+7) Carrinho fica salvo no navegador.
+
+IMPORTANTE: se já existir a tabela profiles antiga com coluna id em vez de user_id, faça backup antes e ajuste/migre a tabela. Esta V10.1 usa user_id para evitar o erro "profiles.user_id does not exist".
