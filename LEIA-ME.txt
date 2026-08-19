@@ -1,5 +1,7 @@
-BRASIL SURVIVALZ LOJA V8.1
-
-Envie index.html, style.css, script.js e todas as imagens JPG/PNG para a raiz do GitHub Pages.
-As imagens precisam ter exatamente os nomes usados no script.js.
-A chave service_role/secret NÃO deve ser colocada no site público.
+BRASIL SURVIVALZ LOJA V9
+1) Envie todos os arquivos deste pacote para a raiz do seu GitHub Pages.
+2) No Supabase > SQL Editor, rode uma vez o arquivo SUPABASE_SETUP.sql.
+3) Mantenha somente a chave PUBLICÁVEL no script.js. Nunca coloque service_role/secret no GitHub.
+4) O cadastro usa SteamID64 com 17 dígitos e salva o perfil automaticamente.
+5) Compras com BS Coins usam uma função segura no Supabase e descontam o saldo pelo preço definido no banco.
+6) PIX gera QR Code no navegador; a confirmação do pagamento continua manual.

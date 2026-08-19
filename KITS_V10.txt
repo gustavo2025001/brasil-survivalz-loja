@@ -1,0 +1,37 @@
+BRASIL SURVIVALZ — KITS V10
+
+KIT BASE — 20 ITENS
+2x Caixa de Pregos
+2x Pack 10 Tábuas
+5x Tronco de Madeira
+2x Arame
+1x Martelo
+1x Serrote
+1x Machado Pequeno
+3x Pedra de Amolar
+2x Corda
+1x CodeLock
+
+KIT MÉDIO — 30 ITENS
+3x Caixa de Pregos
+4x Pack 10 Tábuas
+8x Tronco de Madeira
+3x Arame
+2x Martelo
+2x Serrote
+2x Machado Pequeno
+3x Pedra de Amolar
+2x Corda
+1x CodeLock
+
+KIT AVANÇADO — 50 ITENS
+5x Caixa de Pregos
+7x Pack 10 Tábuas
+15x Tronco de Madeira
+5x Arame
+3x Martelo
+3x Serrote
+3x Machado Pequeno
+4x Pedra de Amolar
+3x Corda
+2x CodeLock
