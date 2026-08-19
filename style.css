@@ -1,1 +1,148 @@
-:root{--g:#86ef12;--g2:#4f9f08;--bg:#030704;--panel:#071008;--line:#2f571c;--muted:#aeb8aa;--gold:#ffc928}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 30% 0,#101b0c 0,#030704 35%,#020502 100%);color:#f7f9f5;font-family:Arial,Helvetica,sans-serif}button,a{font:inherit}.topbar{position:sticky;top:0;z-index:30;height:68px;display:flex;align-items:center;gap:24px;padding:0 2%;background:#030704f5;border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:9px;color:#fff;text-decoration:none;font-weight:900;font-size:18px;white-space:nowrap}.brand b{color:var(--g)}.shield{display:grid;place-items:center;width:34px;height:38px;border:2px solid var(--g);border-radius:10px;color:var(--g)}nav{display:flex;gap:20px;margin:auto}nav a{color:#fff;text-decoration:none;font-size:12px;font-weight:900}nav a:hover{color:var(--g)}button,.heroBtns a{border:1px solid #69c719;background:linear-gradient(#6dbd13,#4c9205);color:#fff;font-weight:900;padding:11px 15px;cursor:pointer;text-decoration:none}.cartTop b{background:#b9e919;color:#111;padding:3px 8px;margin-left:8px;border-radius:4px}.hero{height:330px;position:relative;background:url('hero.jpg') center/cover no-repeat;border-bottom:1px solid var(--line)}.heroShade{position:absolute;inset:0;background:linear-gradient(90deg,#020503e8 0,#02050380 48%,#02050320 100%)}.heroContent{position:relative;max-width:750px;padding:55px 4%}.eyebrow{display:inline-block;padding:6px 10px;border-left:3px solid var(--g);background:#081009;color:#dbe6d6;font-size:11px;letter-spacing:1.5px}.hero h1{font-size:62px;line-height:.9;margin:18px 0 10px}.hero h1 span{color:var(--g)}.hero h2{letter-spacing:4px;font-size:17px}.heroBtns{display:flex;gap:10px;margin-top:22px}.page{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:16px;max-width:1540px;margin:0 auto;padding:14px}main{min-width:0}.featureStrip,.trust{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);background:#050b06}.featureStrip div,.trust div{padding:16px 18px;border-right:1px solid #203819}.featureStrip div:last-child,.trust div:last-child{border-right:0}.featureStrip b,.featureStrip small,.trust b,.trust small{display:block}.featureStrip b,.trust b{font-size:12px}.featureStrip small,.trust small{color:var(--muted);font-size:11px;margin-top:5px}.coinsBar{margin:12px 0;display:flex;justify-content:space-between;align-items:center;padding:16px;border:1px solid var(--line);background:linear-gradient(90deg,#081208,#040804)}.coinsBar>div{display:flex;gap:14px;align-items:center}.coinsBar h2{margin:2px 0;color:var(--gold)}.coinsBar p{margin:3px 0;color:var(--muted)}.coinIcon{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle,#ffe767,#c28100 55%,#593100);border:2px solid #ffd94f;color:#271500;font-weight:900}.catalog{border:1px solid var(--line);background:#050a05;margin-bottom:12px;padding:10px}.sectionTitle{display:flex;align-items:center;gap:8px;margin-bottom:8px}.sectionTitle h2{font-size:18px;margin:0}.sectionTitle span{color:var(--g)}.grid{display:grid;gap:8px}.constructionGrid{grid-template-columns:repeat(4,1fr)}.vehicleGrid{grid-template-columns:repeat(5,1fr)}.kitGrid{grid-template-columns:repeat(3,1fr)}.vipGrid{grid-template-columns:1fr}.mmgGrid{grid-template-columns:repeat(6,1fr)}.tripleRow{display:grid;grid-template-columns:1.2fr .8fr;gap:12px}.compact{margin-bottom:12px}.product{min-width:0;border:1px solid #31551f;background:linear-gradient(180deg,#0c130d,#050a05);overflow:hidden;display:flex;flex-direction:column}.productImg{height:135px;background:#0c120d;overflow:hidden}.productImg img{width:100%;height:100%;object-fit:cover;display:block}.productBody{padding:9px;display:flex;flex-direction:column;flex:1}.tag{font-size:9px;color:var(--g);font-weight:900;letter-spacing:.6px}.product h3{font-size:14px;margin:6px 0}.desc{font-size:10px;color:#b7c2b2;line-height:1.35;min-height:14px}.kitList{font-size:9px;color:#bac5b6;line-height:1.35;max-height:75px;overflow:auto;margin:6px 0}.prices{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-top:auto;padding-top:8px}.price{border:1px solid #385c28;padding:6px}.price small,.price b{display:block}.price small{font-size:8px}.price b{font-size:11px;color:#fff}.price.bs b{color:var(--gold)}.product button{width:100%;padding:8px;font-size:9px;margin-top:6px}.vipCard .productImg{height:180px}.mmgGrid .productImg{height:110px}.mmgGrid h3{font-size:11px}.mmgGrid .desc{min-height:35px}.sidebar{position:sticky;top:82px;align-self:start}.sideCard{border:1px solid var(--line);background:#061007;margin-bottom:10px;padding:15px}.sideCard h3{margin:0 0 12px;font-size:14px}.sideCard button{width:100%}.sideCard a{display:block;color:var(--g);text-decoration:none;margin:13px 0;font-size:12px}.sideCard p{color:#c2cbc0;font-size:11px;line-height:1.5}.accountSide strong{display:block;font-size:28px;color:var(--gold);margin:8px 0}.accountSide span{display:block;margin:5px 0 12px}.payment b small{color:var(--g)}.payline{border-top:1px solid #203b18;padding-top:12px;margin-top:12px}.about{border:1px solid var(--line);padding:20px;background:#071008;margin-bottom:12px}.about p{color:#bac5b7}.trust{margin-bottom:18px}.drawer{position:fixed;right:-440px;top:0;width:min(430px,94vw);height:100vh;z-index:80;background:#061007;border-left:1px solid var(--g2);padding:20px;transition:.25s;overflow:auto}.drawer.open{right:0}.drawerHead{display:flex;justify-content:space-between}.drawerHead button{background:none;border:0;font-size:28px}.backdrop{display:none;position:fixed;inset:0;background:#000b;z-index:70}.backdrop.show{display:block}.cartRow{display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid #29461f;padding:12px 0}.cartRow small{color:#aeb9aa}.qty{display:flex;align-items:center;gap:7px}.qty button{padding:4px 8px}.totals p{display:flex;justify-content:space-between}.drawer>button{width:100%;margin-top:8px}.secondaryBtn{background:#8b6b02;border-color:#d8aa0d}.ghostBtn{background:#101510;border-color:#394735}.modal{display:none;position:fixed;inset:0;z-index:100;background:#000c;align-items:center;justify-content:center;padding:18px}.modal.show{display:flex}.modalCard{position:relative;width:min(520px,96vw);max-height:92vh;overflow:auto;background:#071008;border:1px solid #62b51e;padding:28px}.closeModal{position:absolute;right:10px;top:8px;background:none;border:0;font-size:26px}.modal label{display:block;font-size:10px;font-weight:900;margin-top:11px}.modal input,.modal textarea{width:100%;background:#030604;color:#fff;border:1px solid #34592a;padding:12px;margin-top:5px}.modal form>button,.modalCard>button:not(.closeModal){width:100%;margin-top:12px}.authLogo{font-size:24px;font-weight:900}.authLogo span{color:var(--g)}.tabs{display:flex;margin:20px 0 8px}.tabs button{flex:1}.tabs button.active{background:#78c916}.status{font-size:11px;color:#aaa;margin:5px 0}.status.ok{color:#7fff2b}.status.bad{color:#ff6969}.hidden{display:none!important}.pixArea{text-align:center;margin-top:15px}.pixArea #qrcode{display:inline-block;background:#fff;padding:8px}.pixArea textarea{height:100px}.pixArea strong{display:block;color:var(--gold);margin:10px}.checkoutCard{width:min(600px,96vw)}footer{text-align:center;color:#7f8a7c;border-top:1px solid #1d3417;padding:22px;font-size:11px}@media(max-width:1150px){nav{display:none}.page{grid-template-columns:1fr}.sidebar{position:static;display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.constructionGrid{grid-template-columns:repeat(3,1fr)}.mmgGrid{grid-template-columns:repeat(3,1fr)}}@media(max-width:720px){.brand span:last-child{font-size:14px}.hero{height:310px}.hero h1{font-size:45px}.featureStrip,.trust{grid-template-columns:1fr 1fr}.constructionGrid,.vehicleGrid,.mmgGrid{grid-template-columns:repeat(2,1fr)}.tripleRow{grid-template-columns:1fr}.sidebar{grid-template-columns:1fr}.kitGrid{grid-template-columns:1fr}.topbar{padding:0 10px}.cartTop{font-size:10px}.productImg{height:155px}}
+
+/* ===== MINHA CONTA V2 ===== */
+
+.accountV2{
+  width:100%;
+  background:linear-gradient(180deg,#0a140b 0%,#040805 100%);
+  border:1px solid #62b51e;
+  padding:24px;
+  text-align:center;
+}
+
+.accountV2Header{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  border-bottom:1px solid #29461f;
+  padding-bottom:15px;
+  margin-bottom:18px;
+}
+
+.accountV2Header h2{
+  margin:0;
+  font-size:22px;
+}
+
+.accountIcon{
+  color:#86ef12;
+  font-size:22px;
+}
+
+.accountAvatar{
+  width:82px;
+  height:82px;
+  margin:0 auto 12px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  border:3px solid #86ef12;
+  background:#101b0c;
+  font-size:38px;
+  box-shadow:0 0 25px #6dbd1335;
+}
+
+.accountV2Name{
+  margin:5px 0;
+  font-size:23px;
+  color:#fff;
+}
+
+.playerTag{
+  display:inline-block;
+  background:#172611;
+  border:1px solid #4f9f08;
+  color:#86ef12;
+  padding:4px 12px;
+  font-size:10px;
+  font-weight:900;
+  margin-bottom:20px;
+}
+
+.accountInfoV2{
+  text-align:left;
+  border:1px solid #29461f;
+  background:#050b06;
+}
+
+.infoRow{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:14px;
+  border-bottom:1px solid #203819;
+}
+
+.infoRow:last-child{
+  border-bottom:0;
+}
+
+.infoRow>span{
+  font-size:23px;
+}
+
+.infoRow div{
+  flex:1;
+}
+
+.infoRow small{
+  display:block;
+  color:#aeb8aa;
+  font-size:9px;
+  margin-bottom:4px;
+}
+
+.infoRow strong{
+  color:#fff;
+  font-size:14px;
+}
+
+#accountV2Coins{
+  color:#ffc928;
+  font-size:20px;
+}
+
+#copySteamV2{
+  width:auto;
+  padding:7px 9px;
+  margin:0;
+}
+
+.accountActionsV2{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+  margin-top:14px;
+}
+
+.accountActionsV2 button{
+  min-height:75px;
+  padding:10px;
+  font-size:10px;
+  line-height:1.4;
+}
+
+.logoutV2{
+  width:100%;
+  margin-top:12px;
+  background:#401010;
+  border-color:#b52a2a;
+}
+
+.logoutV2:hover{
+  background:#701818;
+}
+
+.accountSecureV2{
+  margin-top:15px;
+  padding:12px;
+  background:#071008;
+  border:1px solid #29461f;
+  color:#aeb8aa;
+  font-size:10px;
+  line-height:1.5;
+}
+
+.accountSecureV2 b{
+  color:#86ef12;
+}
