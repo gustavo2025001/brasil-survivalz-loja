@@ -51,8 +51,53 @@
 
 <div id="checkoutModal" class="modal"><div class="modalCard checkoutCard"><button class="closeModal" data-close="checkoutModal">×</button><h2>FINALIZAR PEDIDO</h2><label>NOME DO JOGADOR</label><input id="playerName"><label>STEAMID64</label><input id="steamId" inputmode="numeric" maxlength="17"><div id="checkoutSteamStatus" class="status">Digite 17 números.</div><button id="makePix">GERAR PIX</button><div id="pixArea" class="pixArea hidden"><div id="qrcode"></div><strong id="pixAmount"></strong><textarea id="pixCode" readonly></textarea><button id="copyPix">COPIAR PIX</button></div></div></div>
 
-<div id="authModal" class="modal"><div class="modalCard authCard"><button class="closeModal" data-close="authModal">×</button><div class="authLogo">BRASIL <span>SURVIVALZ</span></div><div class="tabs"><button class="active" data-auth="login">ENTRAR</button><button data-auth="register">CRIAR CONTA</button></div><form id="loginForm"><label>E-MAIL</label><input id="loginEmail" type="email" required><label>SENHA</label><input id="loginPassword" type="password" required minlength="6"><button>ENTRAR</button></form><form id="registerForm" class="hidden"><label>NOME DO JOGADOR</label><input id="regPlayer" maxlength="30" required><label>STEAMID64</label><input id="regSteam" inputmode="numeric" maxlength="17" required><div id="regSteamStatus" class="status">Digite exatamente 17 números.</div><label>E-MAIL</label><input id="regEmail" type="email" required><label>SENHA</label><input id="regPassword" type="password" minlength="6" required><label>CONFIRMAR SENHA</label><input id="regConfirm" type="password" minlength="6" required><button>CRIAR MINHA CONTA</button></form><div id="accountPanel" class="hidden"><h3 id="accountName"></h3><p>SteamID64: <b id="accountSteam"></b></p><p>Saldo: <strong id="accountBalance">0 BS</strong></p><button id="logoutBtn">SAIR</button></div></div></div>
+<div class="accountV2" id="accountV2">
+  <div class="accountV2Header">
+    <span class="accountIcon">👤</span>
+    <h2>MINHA CONTA</h2>
+  </div>
 
+  <div class="accountAvatar">🎮</div>
+
+  <h2 id="accountV2Name">Jogador</h2>
+  <span class="playerTag">JOGADOR</span>
+
+  <div class="accountInfoV2">
+    <div class="infoRow">
+      <span>🎮</span>
+      <div>
+        <small>STEAMID64</small>
+        <strong id="accountV2Steam">Não informado</strong>
+      </div>
+      <button type="button" id="copySteamV2">📋</button>
+    </div>
+
+    <div class="infoRow">
+      <span>🪙</span>
+      <div>
+        <small>SALDO DE BS COINS</small>
+        <strong id="accountV2Coins">0 BS</strong>
+      </div>
+    </div>
+  </div>
+
+  <div class="accountActionsV2">
+    <button type="button" id="buyCoinsV2">🪙<br>COMPRAR<br><b>BS COINS</b></button>
+    <button type="button" id="editProfileV2">👤<br>EDITAR<br>PERFIL</button>
+    <button type="button" id="historyV2">🛍️<br>HISTÓRICO<br>COMPRAS</button>
+    <button type="button" id="couponsV2">🎟️<br>CUPONS</button>
+  </div>
+
+  <button type="button" class="logoutV2" id="logoutV2">
+    🚪 SAIR DA CONTA
+  </button>
+
+  <div class="accountSecureV2">
+    🛡️ <b>Sua conta está segura</b><br>
+    Obrigado por apoiar o servidor!
+  </div>
+</div>
+  
 <div id="messageModal" class="modal"><div class="modalCard"><button class="closeModal" data-close="messageModal">×</button><h2 id="messageTitle"></h2><p id="messageBody"></p></div></div>
 <footer>BRASIL SURVIVALZ © 2026 • DayZ Chernarus • Loja oficial da comunidade</footer>
 <script src="script.js?v=90"></script>
