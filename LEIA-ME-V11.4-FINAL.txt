@@ -1,0 +1,18 @@
+BRASIL SURVIVALZ V11.4 FINAL FIX
+
+CORRIGIDO:
+- Avatar da Steam não estoura mais o cabeçalho.
+- Cache bust no CSS/JS.
+- Cards de BS Coins voltam a aparecer como cards visuais.
+- Botão Admin usa profiles.is_admin diretamente.
+- Link do painel aponta para admin/index.html.
+- Painel Admin modernizado.
+- SQL Admin agora usa profiles.is_admin, igual à sua conta atual.
+
+ANTES DE PUBLICAR:
+1) Supabase > SQL Editor: execute SUPABASE_ADMIN_SETUP_V11_4.sql.
+2) Confirme que sua linha em profiles está is_admin = TRUE.
+3) No GitHub, envie TODOS os arquivos e também a pasta admin inteira.
+4) Depois abra a loja e use Ctrl+F5.
+
+IMPORTANTE: se a pasta admin não for enviada ao GitHub, /admin/ dará 404.

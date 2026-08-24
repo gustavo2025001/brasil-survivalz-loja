@@ -7,3 +7,21 @@
 .accountTop{display:flex;align-items:center;gap:7px}.miniAvatar{width:28px;height:28px;border-radius:50%;object-fit:cover;border:1px solid var(--g)}
 .profileAvatarWrap{display:flex;justify-content:center;margin:8px 0 14px}.accountAvatarImg,.accountAvatar{width:92px;height:92px;border-radius:50%;border:3px solid var(--g);box-shadow:0 0 24px #77d51f55}.accountAvatarImg{object-fit:cover}.accountAvatar{display:grid;place-items:center;background:#0b150b;color:var(--g);font-size:28px;font-weight:900}
 .adminInside{display:block;text-align:center;margin-top:10px;padding:12px;border:1px solid #d5a916;background:linear-gradient(180deg,#9a7606,#6f5200);color:#fff;text-decoration:none;font-size:11px;font-weight:900}.adminInside:hover{filter:brightness(1.15)}
+
+/* V11.4 FINAL FIX - cache/layout/avatar/coins */
+.topbar{height:72px;min-height:72px;max-height:72px;overflow:hidden}
+.topActions{height:48px;align-items:stretch;flex:0 0 auto}
+.accountTop,.cartTop{height:48px;display:flex;align-items:center;justify-content:center;gap:8px;white-space:nowrap}
+.accountTop .miniAvatar{display:block;width:30px!important;height:30px!important;min-width:30px!important;max-width:30px!important;min-height:30px!important;max-height:30px!important;border-radius:50%;object-fit:cover;overflow:hidden}
+.accountTop .miniAvatar.hidden{display:none!important}
+.hero{background-image:linear-gradient(90deg,#020503f0 0,#021108d0 45%,#063a1675 100%),radial-gradient(circle at 78% 42%,#1a722955 0,transparent 38%),linear-gradient(135deg,#06160a,#0a3713 48%,#031006)!important;background-size:cover!important}
+.coinShop{display:block!important;overflow:hidden}
+.coinPackages{display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:12px!important}
+.coinPack{display:flex!important;flex-direction:column!important;min-height:320px!important;border-radius:12px!important;background:linear-gradient(180deg,#0b170b,#050805)!important;box-shadow:0 12px 28px #0008,inset 0 0 0 1px #77d51f10!important}
+.coinArt{position:relative!important;width:104px!important;height:104px!important;border-radius:50%!important;background:radial-gradient(circle at 32% 28%,#fff8bd 0,#ffe04c 12%,#d79706 40%,#754400 72%,#221400 100%)!important;box-shadow:0 0 0 5px #301d00,0 0 28px #ffc92845,inset 0 0 18px #fff8!important;font-size:0!important}
+.coinArt:before{content:'BS';display:grid;place-items:center;position:absolute;inset:16px;border-radius:50%;border:3px solid #2b1800;color:#2b1800;font-size:28px;font-weight:1000;transform:rotate(-8deg)}
+.coinArt:after{content:'✦';position:absolute;right:8px;top:8px;color:#fff4a8;font-size:18px;text-shadow:0 0 10px #fff}
+.coinPack strong{font-size:30px!important}.coinPack .coinPrice{font-size:20px!important}.coinPack button{margin-top:auto!important;border-radius:6px!important}
+@media(max-width:1200px){.coinPackages{grid-template-columns:repeat(3,minmax(0,1fr))!important}}
+@media(max-width:720px){.topbar{height:64px;min-height:64px;max-height:64px}.coinPackages{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:460px){.coinPackages{grid-template-columns:1fr!important}}
