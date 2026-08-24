@@ -1,0 +1,20 @@
+BRASIL SURVIVALZ V11.2 - PAINEL ADMIN
+
+A loja original foi preservada. O painel novo fica em /admin/.
+
+PASSOS:
+1. Faça backup do GitHub atual.
+2. No Supabase abra SQL Editor.
+3. Execute SUPABASE_ADMIN_SETUP.sql.
+4. No final do SQL, substitua SEU_EMAIL_AQUI pelo e-mail da SUA conta e execute a linha de INSERT.
+5. Envie todos os arquivos/pastas deste ZIP ao GitHub.
+6. Loja: .../brasil-survivalz-loja/
+7. Admin: .../brasil-survivalz-loja/admin/
+
+SEGURANÇA:
+- O painel exige login Supabase + registro em bs_admins.
+- As funções administrativas verificam o administrador no banco.
+- Não foi colocada service_role key no site.
+
+IMPORTANTE:
+O projeto atual usa as tabelas inglesas profiles/orders no script.js. Se seu Supabase tiver apenas perfis/pedidos, não execute o SQL ainda: precisamos alinhar os nomes das tabelas primeiro.

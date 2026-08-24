@@ -1,0 +1,4 @@
+BRASIL SURVIVALZ V11.3.1
+Correção: botão Painel Administrativo agora lê profiles.is_admin diretamente.
+Conta com is_admin = true verá o botão dentro de Minha Conta.
+Avatar Steam e demais recursos da V11.3 preservados.

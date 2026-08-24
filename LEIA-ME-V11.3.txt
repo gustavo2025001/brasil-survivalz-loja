@@ -1,0 +1,14 @@
+BRASIL SURVIVALZ V11.3
+
+NOVO:
+- Avatar da Steam no perfil do jogador pelo SteamID64.
+- Botão PAINEL ADMINISTRATIVO dentro da conta, visível somente para bs_admins.
+- Loja, preços, fotos, PIX, BS Coins e painel V11.2 preservados.
+
+SUPABASE:
+1. Execute SUPABASE_ADMIN_SETUP.sql.
+2. Crie/deploy a Edge Function supabase/functions/steam-avatar/index.ts.
+3. Nos Secrets da Edge Function configure STEAM_WEB_API_KEY com sua Steam Web API Key.
+4. SUPABASE_URL, SUPABASE_ANON_KEY e SUPABASE_SERVICE_ROLE_KEY são fornecidas pelo ambiente Supabase ao deploy.
+
+SEGURANÇA: nunca coloque STEAM_WEB_API_KEY ou SERVICE_ROLE_KEY no script.js/GitHub Pages.

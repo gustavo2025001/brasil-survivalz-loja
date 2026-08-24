@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>BRASIL SURVIVALZ | Loja V11.1</title>
+<title>BRASIL SURVIVALZ | Loja V11.3.1</title>
 <link rel="stylesheet" href="style.css">
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
@@ -13,10 +13,10 @@
   <a class="brand" href="#inicio"><span class="shield">BS</span><span>BRASIL <b>SURVIVALZ</b><small>LOJA OFICIAL</small></span></a>
   <nav>
     <a href="#inicio">INÍCIO</a><a href="#loja">CONSTRUÇÃO</a><a href="#carros">VEÍCULOS</a>
-    <a href="#kits">KITS</a><a href="#vip">VIP</a><a href="#mmg">MMG</a><a href="#sobre">SERVIDOR</a>
+    <a href="#kits">KITS</a><a href="#vip">VIP</a><a href="#mmg">MMG</a><a href="#bscoins">BS COINS</a><a href="#sobre">SERVIDOR</a>
   </nav>
   <div class="topActions">
-    <button id="openAccount" class="accountTop">👤 MINHA CONTA</button>
+    <button id="openAccount" class="accountTop"><img id="topAvatar" class="miniAvatar hidden" alt="Avatar Steam"> <span id="topAccountText">👤 MINHA CONTA</span></button>
     <button id="openCart" class="cartTop">🛒 CARRINHO <b id="cartCount">0</b></button>
   </div>
 </header>
@@ -33,7 +33,7 @@
       <a class="outlineBtn" href="https://discord.gg/cgMUyM8RZ" target="_blank">DISCORD OFICIAL</a>
     </div>
   </div>
-  <span class="version">V11.1</span>
+  <span class="version">V11.3.1</span>
 </section>
 
 <section class="quickStats">
@@ -52,6 +52,7 @@
       <a href="#kits">📦 Kits de Base</a>
       <a href="#vip">⭐ VIP</a>
       <a href="#mmg">🗄️ MMG Storage</a>
+      <a href="#bscoins">🪙 Comprar BS Coins</a>
     </section>
     <section class="railCard economy">
       <small>ECONOMIA DO SERVIDOR</small><h3>🪙 BS COINS</h3>
@@ -97,6 +98,13 @@
       <div id="mmgProducts" class="grid mmgGrid"></div>
     </section>
 
+
+    <section id="bscoins" class="coinShop">
+      <div class="coinShopIntro"><div><span class="eyebrow">ECONOMIA DO SERVIDOR</span><h2>COMPRAR <span>BS COINS</span></h2><p>Escolha seu pacote. Compra de BS Coins disponível exclusivamente com dinheiro real via PIX.</p></div><div class="pixOnly">◆ PAGAMENTO SOMENTE VIA PIX</div></div>
+      <div id="coinPackages" class="coinPackages"></div>
+      <div class="coinHow"><div><b>1 • ESCOLHA O PACOTE</b>Selecione quantos BS Coins deseja comprar.</div><div><b>2 • PAGUE VIA PIX</b>O QR Code é gerado para o valor exato.</div><div><b>3 • AGUARDE CONFIRMAÇÃO</b>O pedido aparece no Painel Admin.</div><div><b>4 • COINS NA CONTA</b>Após aprovação, o saldo é creditado.</div></div>
+    </section>
+
     <section id="sobre" class="about">
       <div><small>SOBRE O SERVIDOR</small><h2>BRASIL SURVIVALZ</h2></div>
       <p>Servidor focado em sobrevivência Vanilla, PVP, construção de base e progressão. A loja oferece conveniência sem transformar o servidor em pay-to-win.</p>
@@ -130,12 +138,12 @@
   <button id="checkoutPix">PAGAR COM PIX</button><button id="checkoutBs" class="secondaryBtn">PAGAR COM BS COINS</button><button id="clearCart" class="ghostBtn">LIMPAR CARRINHO</button>
 </aside>
 
-<div id="authModal" class="modal"><div class="modalCard authCard"><button class="closeModal" data-close="authModal">×</button><div class="authLogo">BRASIL <span>SURVIVALZ</span></div><div class="tabs"><button data-auth="login" class="active">ENTRAR</button><button data-auth="register">CRIAR CONTA</button></div><form id="loginForm"><label>E-MAIL</label><input id="loginEmail" type="email" required><label>SENHA</label><input id="loginPassword" type="password" required><button>ENTRAR</button></form><form id="registerForm" class="hidden"><label>NOME NO DAYZ</label><input id="regPlayer" required><label>STEAMID64</label><input id="regSteam" inputmode="numeric" maxlength="17" required><p id="regSteamStatus" class="status">Digite exatamente 17 números.</p><label>E-MAIL</label><input id="regEmail" type="email" required><label>SENHA</label><input id="regPassword" type="password" minlength="6" required><label>CONFIRMAR SENHA</label><input id="regConfirm" type="password" minlength="6" required><button>CRIAR CONTA</button></form><div id="accountPanel" class="hidden"><div class="accountAvatar">BS</div><h2 id="accountName">Jogador</h2><span class="playerTag">CONTA BRASIL SURVIVALZ</span><div class="accountInfo"><p><small>STEAMID64</small><b id="accountSteam">Não informado</b></p><p><small>SALDO</small><b id="accountBalance">0 BS</b></p></div><button id="logoutBtn" class="ghostBtn">SAIR DA CONTA</button></div></div></div>
+<div id="authModal" class="modal"><div class="modalCard authCard"><button class="closeModal" data-close="authModal">×</button><div class="authLogo">BRASIL <span>SURVIVALZ</span></div><div class="tabs"><button data-auth="login" class="active">ENTRAR</button><button data-auth="register">CRIAR CONTA</button></div><form id="loginForm"><label>E-MAIL</label><input id="loginEmail" type="email" required><label>SENHA</label><input id="loginPassword" type="password" required><button>ENTRAR</button></form><form id="registerForm" class="hidden"><label>NOME NO DAYZ</label><input id="regPlayer" required><label>STEAMID64</label><input id="regSteam" inputmode="numeric" maxlength="17" required><p id="regSteamStatus" class="status">Digite exatamente 17 números.</p><label>E-MAIL</label><input id="regEmail" type="email" required><label>SENHA</label><input id="regPassword" type="password" minlength="6" required><label>CONFIRMAR SENHA</label><input id="regConfirm" type="password" minlength="6" required><button>CRIAR CONTA</button></form><div id="accountPanel" class="hidden"><div class="profileAvatarWrap"><div id="avatarFallback" class="accountAvatar">BS</div><img id="accountAvatarImg" class="accountAvatarImg hidden" alt="Avatar Steam"></div><h2 id="accountName">Jogador</h2><span class="playerTag">CONTA BRASIL SURVIVALZ</span><div class="accountInfo"><p><small>STEAMID64</small><b id="accountSteam">Não informado</b></p><p><small>SALDO</small><b id="accountBalance">0 BS</b></p></div><button id="syncSteamAvatar" class="secondaryBtn">🔄 ATUALIZAR FOTO DA STEAM</button><a id="adminInsideBtn" class="adminInside hidden" href="admin/">🛡️ PAINEL ADMINISTRATIVO</a><button id="logoutBtn" class="ghostBtn">SAIR DA CONTA</button></div></div></div>
 
 <div id="checkoutModal" class="modal"><div class="modalCard checkoutCard"><button class="closeModal" data-close="checkoutModal">×</button><h2>FINALIZAR PEDIDO PIX</h2><label>NOME DO JOGADOR</label><input id="playerName"><label>STEAMID64</label><input id="steamId" inputmode="numeric" maxlength="17"><p id="checkoutSteamStatus" class="status">Digite exatamente 17 números.</p><button id="makePix">GERAR PIX / QR CODE</button><div id="pixArea" class="pixArea hidden"><div id="qrcode"></div><strong id="pixAmount"></strong><textarea id="pixCode" readonly></textarea><button id="copyPix">COPIAR PIX</button></div></div></div>
 <div id="messageModal" class="modal"><div class="modalCard"><button class="closeModal" data-close="messageModal">×</button><h2 id="messageTitle"></h2><p id="messageBody"></p></div></div>
 
-<footer><b>BRASIL <span>SURVIVALZ</span></b><p>DayZ • Chernarus • Vanilla Survival • Loja V11.1</p></footer>
-<script src="script.js?v=10.1"></script>
+<footer><b>BRASIL <span>SURVIVALZ</span></b><p>DayZ • Chernarus • Vanilla Survival • Loja V11.3.1</p></footer>
+<script src="script.js?v=11.2"></script>
 </body>
 </html>
