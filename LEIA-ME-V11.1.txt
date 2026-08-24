@@ -1,0 +1,14 @@
+V11.1 MMG
+Somente:
+Gun Rack Blue = mmg_gun_rack_kit_blue
+TA-50 Locker Blue = mmg_locker02_blue_kit
+Gun Wall Wooden = mmg_gun_wall_kit_wooden
+Gun Wall Metal = mmg_gun_wall_kit_metal
+Palette Storage = mmg_palette_storage_kit (500 slots)
+
+Nomes das imagens:
+mmg_gun_rack_blue.jpg
+mmg_ta50_locker_blue.jpg
+mmg_gun_wall_wooden.jpg
+mmg_gun_wall_metal.jpg
+mmg_palette_storage_500.jpg
