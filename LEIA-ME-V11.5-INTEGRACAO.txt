@@ -1,0 +1,15 @@
+BRASIL SURVIVALZ V11.5 - CORREÇÃO LOJA + ADMIN
+
+1. No Supabase > SQL Editor, abra SUPABASE_LOJA_ADMIN_V11_5.sql e execute TODO o arquivo.
+2. Depois substitua no GitHub os arquivos da loja por esta versão (incluindo a pasta admin inteira).
+3. Aguarde o GitHub Pages publicar e use Ctrl+F5.
+
+CORRIGIDO:
+- gunrackblue e todos os IDs do catálogo aceitos nas compras com BS.
+- compra de BS Coins via PIX cria pedido sem erro de função/cache.
+- compra normal via PIX passa a ser registrada no banco e aparece no Painel Admin.
+- compra com BS Coins aparece no Painel Admin e desconta o saldo.
+- painel mostra produtos, jogador, SteamID64, forma de pagamento, PIX, BS, status e data.
+- erros do painel deixam de aparecer como 0 silenciosamente e passam a mostrar a mensagem real.
+
+IMPORTANTE: execute o SQL V11.5 antes de testar a nova loja.
