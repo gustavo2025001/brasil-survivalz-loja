@@ -9,11 +9,11 @@ cars:[{id:"sarka",name:"Sarka 120",tag:"VEÍCULO VANILLA",img:"sarka.jpg",brl:25
 kits:[{id:"kitbase",name:"Kit Base — 20 itens",tag:"KIT DE CONSTRUÇÃO",img:"kit_base.jpg",brl:25,bs:1200,desc:"Para começar sua base.",items:["3x Caixa de Pregos","2x Martelo","2x Serrote","2x Machado Pequeno","6x Pedra de Amolar","50x Tábuas","50x Madeira","1x Corda"]},{id:"kitmedio",name:"Kit Médio — 30 itens",tag:"KIT DE CONSTRUÇÃO",img:"kit_medio.jpg",brl:55,bs:10000,desc:"Mais recursos para expansão.",items:["5x Caixa de Pregos","3x Martelo","3x Serrote","3x Machado Pequeno","10x Pedra de Amolar","100x Tábuas","100x Madeira","2x Cordas"]},{id:"kitavancado",name:"Kit Avançado — 50 itens",tag:"KIT DE CONSTRUÇÃO",img:"kit_avancado.jpg",brl:100,bs:15000,desc:"Pacote grande para base fortificada.",items:["8x Caixa de Pregos","5x Martelo","4x Serrote","4x Machado Pequeno","15x Pedra de Amolar","200x Tábuas","200x Madeira","4x Cordas"]}],
 vip:[{id:"vip30",name:"VIP Prioridade — 30 dias",tag:"VIP",img:"vip.jpg",brl:35,bs:15000,desc:"Tenha prioridade na fila de entrada e acesse o servidor mais rápido nos horários de maior movimento. O VIP é ideal para quem joga com frequência e também ajuda a manter o BRASIL SURVIVALZ ativo e em constante evolução."}],
 mmg:[
-{id:"gunrackblue",name:"Gun Rack Blue",tag:"MMG STORAGE",img:"mmg_gun_rack_blue.jpg",brl:35,bs:3500,desc:"8 slot arma"},
-{id:"ta50blue",name:"ARMARIO",tag:"MMG STORAGE",img:"mmg_ta50_locker_blue.jpg",brl:35,bs:4600,desc:"100 slots de armazenamento, além de espaços próprios para 5 armas, 2 caixas de munição, 1 pistola e loadout. Ele também é lockable."},
-{id:"gunwallwooden",name:"painel de armas",tag:"MMG STORAGE",img:"mmg_gun_wall_wooden.jpg",brl:45,bs:5000,desc:"40 slots de armazenamento + suporte para 8 armas."},
-{id:"gunwallmetal",name:"PAINEL DE ARMAS",tag:"MMG STORAGE",img:"mmg_gun_wall_metal.jpg",brl:35,bs:4300,desc:"40 slots + suporte para 8 armas"},
-{id:"palette500",name:"BAU COM 500 slots",tag:"MMG STORAGE • 500 SLOTS",img:"mmg_palette_storage_500.jpg",brl:40,bs:12000,desc:"500 slots • 500 slots"}
+{id:"equipmentlocker",name:"Equipment Locker Green",tag:"MMG STORAGE • 100 SLOTS",img:"mmg_equipment_locker_green.png",brl:35,bs:4300,desc:"100 slots de armazenamento."},
+{id:"ta50blue",name:"TA-50 Locker Blue",tag:"MMG STORAGE • 100 SLOTS",img:"mmg_ta50_locker_blue.png",brl:35,bs:4600,desc:"100 slots de armazenamento."},
+{id:"gunrackblue",name:"Gun Rack Blue",tag:"MMG STORAGE • 10 ARMAS",img:"mmg_gun_rack_blue.png",brl:35,bs:3500,desc:"Suporte para ate 10 armas."},
+{id:"gunwallwooden",name:"Gun Wall Wooden",tag:"MMG STORAGE • 8 ARMAS",img:"mmg_gun_wall_wooden.png",brl:45,bs:5000,desc:"Painel de armas de madeira com suporte para ate 8 armas."},
+{id:"palette500",name:"Palette Storage",tag:"MMG STORAGE • 500 SLOTS",img:"mmg_palette_storage_500.png",brl:40,bs:12000,desc:"500 slots de armazenamento."}
 ]};
 const COIN_PACKAGES=[
 {id:"bs1500",coins:1500,brl:15},
